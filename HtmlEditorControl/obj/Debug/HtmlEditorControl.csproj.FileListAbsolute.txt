@@ -1,0 +1,116 @@
+c:\users\fionwang\documents\visual studio 2012\Projects\WinForms HTML Editor1\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.dll
+c:\users\fionwang\documents\visual studio 2012\Projects\WinForms HTML Editor1\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.pdb
+c:\users\fionwang\documents\visual studio 2012\Projects\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\HtmlEditorControl.csprojResolveAssemblyReference.cache
+c:\users\fionwang\documents\visual studio 2012\Projects\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EditHtmlForm.resources
+c:\users\fionwang\documents\visual studio 2012\Projects\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterHrefForm.resources
+c:\users\fionwang\documents\visual studio 2012\Projects\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterImageForm.resources
+c:\users\fionwang\documents\visual studio 2012\Projects\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FindReplaceForm.resources
+c:\users\fionwang\documents\visual studio 2012\Projects\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FontAttributeForm.resources
+c:\users\fionwang\documents\visual studio 2012\Projects\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.HtmlEditorControl.resources
+c:\users\fionwang\documents\visual studio 2012\Projects\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.TablePropertyForm.resources
+c:\users\fionwang\documents\visual studio 2012\Projects\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.Properties.Resources.resources
+c:\users\fionwang\documents\visual studio 2012\Projects\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\HtmlEditorControl.csproj.GenerateResource.Cache
+c:\users\fionwang\documents\visual studio 2012\Projects\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.dll
+c:\users\fionwang\documents\visual studio 2012\Projects\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.pdb
+D:\MSIT 99\專題\temp\WinForms HTML Editor1\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.dll
+D:\MSIT 99\專題\temp\WinForms HTML Editor1\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.pdb
+D:\MSIT 99\專題\temp\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\HtmlEditorControl.csprojResolveAssemblyReference.cache
+D:\MSIT 99\專題\temp\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EditHtmlForm.resources
+D:\MSIT 99\專題\temp\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterHrefForm.resources
+D:\MSIT 99\專題\temp\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterImageForm.resources
+D:\MSIT 99\專題\temp\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FindReplaceForm.resources
+D:\MSIT 99\專題\temp\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FontAttributeForm.resources
+D:\MSIT 99\專題\temp\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.HtmlEditorControl.resources
+D:\MSIT 99\專題\temp\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.TablePropertyForm.resources
+D:\MSIT 99\專題\temp\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.Properties.Resources.resources
+D:\MSIT 99\專題\temp\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\HtmlEditorControl.csproj.GenerateResource.Cache
+D:\MSIT 99\專題\temp\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.dll
+D:\MSIT 99\專題\temp\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.pdb
+C:\Users\III\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.dll
+C:\Users\III\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.pdb
+C:\Users\III\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\HtmlEditorControl.csprojResolveAssemblyReference.cache
+C:\Users\III\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EditHtmlForm.resources
+C:\Users\III\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterHrefForm.resources
+C:\Users\III\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterImageForm.resources
+C:\Users\III\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FindReplaceForm.resources
+C:\Users\III\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FontAttributeForm.resources
+C:\Users\III\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.HtmlEditorControl.resources
+C:\Users\III\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.TablePropertyForm.resources
+C:\Users\III\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.Properties.Resources.resources
+C:\Users\III\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\HtmlEditorControl.csproj.GenerateResource.Cache
+C:\Users\III\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.dll
+C:\Users\III\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.pdb
+C:\Users\emily_1413\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.dll
+C:\Users\emily_1413\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.pdb
+C:\Users\emily_1413\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\HtmlEditorControl.csprojResolveAssemblyReference.cache
+C:\Users\emily_1413\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EditHtmlForm.resources
+C:\Users\emily_1413\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterHrefForm.resources
+C:\Users\emily_1413\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterImageForm.resources
+C:\Users\emily_1413\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FindReplaceForm.resources
+C:\Users\emily_1413\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FontAttributeForm.resources
+C:\Users\emily_1413\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.HtmlEditorControl.resources
+C:\Users\emily_1413\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.TablePropertyForm.resources
+C:\Users\emily_1413\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.Properties.Resources.resources
+C:\Users\emily_1413\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\HtmlEditorControl.csproj.GenerateResource.Cache
+C:\Users\emily_1413\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.dll
+C:\Users\emily_1413\Desktop\後台\WinForms HTML Editor1\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.pdb
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.dll
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.pdb
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\obj\Debug\HTMLEditorControl.csprojResolveAssemblyReference.cache
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EditHtmlForm.resources
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterHrefForm.resources
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterImageForm.resources
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FindReplaceForm.resources
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FontAttributeForm.resources
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.HtmlEditorControl.resources
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.TablePropertyForm.resources
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.Properties.Resources.resources
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.UserControl1.resources
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\obj\Debug\HTMLEditorControl.csproj.GenerateResource.Cache
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.dll
+C:\Users\emily_1413\Desktop\後台\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.pdb
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.dll
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.pdb
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\obj\Debug\HTMLEditorControl.csprojResolveAssemblyReference.cache
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EditHtmlForm.resources
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterHrefForm.resources
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterImageForm.resources
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FindReplaceForm.resources
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FontAttributeForm.resources
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.HtmlEditorControl.resources
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.TablePropertyForm.resources
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.Properties.Resources.resources
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.UserControl1.resources
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\obj\Debug\HTMLEditorControl.csproj.GenerateResource.Cache
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.dll
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.pdb
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.dll
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.pdb
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\HTMLEditorControl.csprojResolveAssemblyReference.cache
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EditHtmlForm.resources
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterHrefForm.resources
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterImageForm.resources
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FindReplaceForm.resources
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FontAttributeForm.resources
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.HtmlEditorControl.resources
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.TablePropertyForm.resources
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.Properties.Resources.resources
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.UserControl1.resources
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\HTMLEditorControl.csproj.GenerateResource.Cache
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.dll
+C:\Users\III\Desktop\後台\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.pdb
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.dll
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\bin\Debug\MSDN.HtmlEditorControl.pdb
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\HTMLEditorControl.csprojResolveAssemblyReference.cache
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EditHtmlForm.resources
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterHrefForm.resources
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.EnterImageForm.resources
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FindReplaceForm.resources
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.FontAttributeForm.resources
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.HtmlEditorControl.resources
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.TablePropertyForm.resources
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.Properties.Resources.resources
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.Html.Editor.UserControl1.resources
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\HTMLEditorControl.csproj.GenerateResource.Cache
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.dll
+K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\HtmlEditorControl\obj\Debug\MSDN.HtmlEditorControl.pdb

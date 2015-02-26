@@ -1,0 +1,102 @@
+﻿Installing assembly 'C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+Installing service ServiceAutoMailing...
+Creating EventLog source ServiceAutoMailing in log Application...
+Rolling back assembly 'C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+Restoring event log to previous state for source ServiceAutoMailing.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+Installing service ServiceAutoMailing...
+Service ServiceAutoMailing has been successfully installed.
+Creating EventLog source ServiceAutoMailing in log Application...
+Committing assembly 'C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+Uninstalling assembly 'C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+Removing EventLog source ServiceAutoMailing.
+Service ServiceAutoMailing is being removed from the system...
+Service ServiceAutoMailing was successfully removed from the system.
+Installing assembly 'C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+Installing service ServiceAutoMailing...
+Creating EventLog source ServiceAutoMailing in log Application...
+Rolling back assembly 'C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+Restoring event log to previous state for source ServiceAutoMailing.
+Installing assembly 'C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+Installing service ServiceAutoMailing...
+Service ServiceAutoMailing has been successfully installed.
+Creating EventLog source ServiceAutoMailing in log Application...
+Committing assembly 'C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+Installing assembly 'C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+Installing service ServiceAutoMailing...
+Creating EventLog source ServiceAutoMailing in log Application...
+Rolling back assembly 'C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\emily_1413\Desktop\Backend\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+Restoring event log to previous state for source ServiceAutoMailing.
+正在安裝組件 'C:\Users\III\Desktop\後台\SSBing\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'。
+受影響的參數為:
+   logtoconsole = 
+   logfile = C:\Users\III\Desktop\後台\SSBing\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\III\Desktop\後台\SSBing\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+正在安裝服務 ServiceAutoMailing...
+已經成功安裝服務 ServiceAutoMailing。
+正在記錄檔 Application 中建立 EventLog 來源 ServiceAutoMailing...
+正在認可組件 'C:\Users\III\Desktop\後台\SSBing\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'。
+受影響的參數為:
+   logtoconsole = 
+   logfile = C:\Users\III\Desktop\後台\SSBing\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\III\Desktop\後台\SSBing\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+正在安裝組件 'C:\Users\III\Desktop\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'。
+受影響的參數為:
+   logtoconsole = 
+   logfile = C:\Users\III\Desktop\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\III\Desktop\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+正在安裝服務 ServiceAutoMailing...
+已經成功安裝服務 ServiceAutoMailing。
+正在記錄檔 Application 中建立 EventLog 來源 ServiceAutoMailing...
+正在認可組件 'C:\Users\III\Desktop\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe'。
+受影響的參數為:
+   logtoconsole = 
+   logfile = C:\Users\III\Desktop\SolutionSS\WindowsService1\bin\Debug\WindowsService1.InstallLog
+   assemblypath = C:\Users\III\Desktop\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe

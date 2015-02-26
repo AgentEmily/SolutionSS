@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="ExControls.BaseEntry" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>BaseEntry.cs</FileName>
+      <HashCode>ipiDEBgsiCDhcAggNADggBACUgDIACAANAAiAIACCEQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExControls.ComboBoxEntry">
+    <Position X="11.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ComboBoxEntry.cs</FileName>
+      <HashCode>AAAAAQAAACAEAgAAAACAAAAGAAAIAAAAAAAACBAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExControls.ExLabel">
+    <Position X="11" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ExLabel.cs</FileName>
+      <HashCode>AAAAAAgAgCAAAAAAAACAAAACAAAAAAAICACAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExControls.ExTextBox">
+    <Position X="12.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ExTextBox.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExControls.Helper">
+    <Position X="16.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Helper.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExControls.LabelEntry">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>LabelEntry.cs</FileName>
+      <HashCode>AAIAAAAAACAAAAAAAACAAAACAAAAAAIAAAAAAAAAAEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExControls.RoundCornerPanel">
+    <Position X="14.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>RoundCornerPanel.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAEAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExControls.TextEntry">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>TextEntry.cs</FileName>
+      <HashCode>AAIAAAAAACAAAAAAAACAAAACBAIAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExControls.ListBoxEntry">
+    <Position X="14" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ListBoxEntry.cs</FileName>
+      <HashCode>AAAIgQAAACAAAgAAAACAAAAGAAAIAAAAAAAAABAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExControls.DateTimePickerEntry">
+    <Position X="16.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DateTimePickerEntry.cs</FileName>
+      <HashCode>AACAAAAAACAAAAAAAACAAAACAgAAAAAAAAAAAAAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExControls.LinkLabelEntry">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>LinkLabelEntry.cs</FileName>
+      <HashCode>AAAAAAAAACEAAAAAgACAAAACAAAAIAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExControls.MonthCalendarEntry">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MonthCalendarEntry.cs</FileName>
+      <HashCode>AAAAAAgAACAQAAAAAACAAAACAAAIAAAAAAAAAAAAIAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExControls.PictureBoxEntry">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PictureBoxEntry.cs</FileName>
+      <HashCode>AAAAAYAAACAAAAAAAACAAAACAAAIAAAAAAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

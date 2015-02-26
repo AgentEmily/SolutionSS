@@ -1,0 +1,2290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SmartShoppingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Brands">
+          <Key>
+            <PropertyRef Name="Brand_ID品牌編號" />
+          </Key>
+          <Property Name="Brand_ID品牌編號" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Brand_Name品牌名稱" Type="nvarchar" MaxLength="50" />
+          <Property Name="Picture品牌圖片" Type="varbinary(max)" />
+          <Property Name="Description品牌簡介" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="Categories_ID分類編號" />
+          </Key>
+          <Property Name="Categories_ID分類編號" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoriesName商品分類" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="上層分類編號" Type="int" />
+          <Property Name="設定來源編號" Type="int" />
+        </EntityType>
+        <EntityType Name="InsideShoppingList">
+          <Key>
+            <PropertyRef Name="List_ID" />
+          </Key>
+          <Property Name="List_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Member_ID" Type="int" />
+          <Property Name="Category_ID" Type="int" />
+          <Property Name="Product_ID" Type="int" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Next_Date" Type="datetime" />
+          <Property Name="Quantity" Type="int" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="Member_ID會員編號" />
+          </Key>
+          <Property Name="Member_ID會員編號" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MemberName會員姓名" Type="nvarchar" MaxLength="50" />
+          <Property Name="Username登入帳號" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password登入密碼" Type="nvarchar" MaxLength="80" />
+          <Property Name="Salt" Type="nvarchar" MaxLength="80" />
+          <Property Name="Birthyear出生年" Type="nchar" MaxLength="10" />
+          <Property Name="Birthdate出生日期" Type="datetime" />
+          <Property Name="Phone電話" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address地址" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShippingAddress收貨地址" Type="nvarchar" MaxLength="50" />
+          <Property Name="M_Picture會員相片" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="MemberRole">
+          <Key>
+            <PropertyRef Name="Member_ID會員編號" />
+            <PropertyRef Name="Roles_ID購物角色編號" />
+          </Key>
+          <Property Name="Member_ID會員編號" Type="int" Nullable="false" />
+          <Property Name="Roles_ID購物角色編號" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="OrderDetail_ID訂單明細編號" />
+          </Key>
+          <Property Name="OrderDetail_ID訂單明細編號" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Order_ID訂單編號" Type="int" />
+          <Property Name="Product_ID商品編號" Type="int" Nullable="false" />
+          <Property Name="Status_ID狀態編號" Type="int" />
+          <Property Name="UnitPrice單價" Type="money" />
+          <Property Name="Quantity數量" Type="int" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="Order_ID訂單編號" />
+          </Key>
+          <Property Name="Order_ID訂單編號" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Member_ID會員編號" Type="int" />
+          <Property Name="OrderDate訂貨日期" Type="datetime" />
+          <Property Name="Date預計到貨日期" Type="datetime" />
+          <Property Name="PaymentMethod_ID付款方式編號" Type="int" />
+          <Property Name="Done" Type="bit" />
+          <Property Name="Status_ID狀態編號" Type="int" />
+        </EntityType>
+        <EntityType Name="OutsideShoppingList">
+          <Key>
+            <PropertyRef Name="List_ID_Out" />
+          </Key>
+          <Property Name="List_ID_Out" Type="int" Nullable="false" />
+          <Property Name="Member_ID" Type="int" />
+          <Property Name="Category_ID" Type="int" />
+          <Property Name="Link" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Next_Date下次提醒日" Type="datetime" />
+          <Property Name="Active回購提醒" Type="bit" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'SmartShopping.dbo.OutSide完成日紀錄' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="OutSide完成日紀錄">
+          <Property Name="List_ID_Out" Type="int" />
+          <Property Name="Last_Date完成日" Type="datetime" />
+        </EntityType>-->
+        <EntityType Name="PaymentMethod">
+          <Key>
+            <PropertyRef Name="PaymentMethod_ID付款方式編號" />
+          </Key>
+          <Property Name="PaymentMethod_ID付款方式編號" Type="int" Nullable="false" />
+          <Property Name="PaymentMethod付款方式" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductPicture">
+          <Key>
+            <PropertyRef Name="Picture_ID商品圖片編號" />
+          </Key>
+          <Property Name="Picture_ID商品圖片編號" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Product_ID商品編號" Type="int" Nullable="false" />
+          <Property Name="Picture圖片" Type="varbinary(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="Product_ID商品編號" />
+          </Key>
+          <Property Name="Product_ID商品編號" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductName商品名稱" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Categories_ID分類編號" Type="int" Nullable="false" />
+          <Property Name="UnitPrice單價" Type="money" Nullable="false" />
+          <Property Name="Stock庫存量" Type="int" Nullable="false" />
+          <Property Name="Description商品描述" Type="nvarchar(max)" />
+          <Property Name="Vendor_ID供應商編號" Type="int" />
+          <Property Name="Brand_ID品牌編號" Type="int" />
+          <Property Name="QtyperUnit包裝數量" Type="int" />
+          <Property Name="Start上架日" Type="datetime" />
+          <Property Name="End下架日" Type="datetime" />
+          <Property Name="Discontinued" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="promotion">
+          <Key>
+            <PropertyRef Name="Promotion_ID商品促銷編號" />
+          </Key>
+          <Property Name="Promotion_ID商品促銷編號" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description描述" Type="nvarchar(max)" />
+          <Property Name="Type類型" Type="nvarchar" MaxLength="50" />
+          <Property Name="StartDate起始日" Type="datetime" />
+          <Property Name="EndDate終止日" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PromotionDetail">
+          <Key>
+            <PropertyRef Name="Promotion_ID商品促銷編號" />
+            <PropertyRef Name="Product_ID商品編號" />
+          </Key>
+          <Property Name="Promotion_ID商品促銷編號" Type="int" Nullable="false" />
+          <Property Name="Product_ID商品編號" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PurchaseOrderDetail進貨明細">
+          <Key>
+            <PropertyRef Name="PurchaseOrderDetail_ID" />
+          </Key>
+          <Property Name="PurchaseOrderDetail_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PurchaseOrder_ID進貨單號" Type="int" />
+          <Property Name="Product_ID商品編號" Type="int" />
+          <Property Name="Status_ID狀態編號" Type="int" />
+          <Property Name="UnitPrice單價" Type="money" />
+          <Property Name="OrderQuantity數量" Type="int" />
+          <Property Name="ReceivedQuantity到貨量" Type="int" />
+          <Property Name="DueDate交期" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PurchaseOrder進貨單">
+          <Key>
+            <PropertyRef Name="PurchaseOrder_ID進貨單號" />
+          </Key>
+          <Property Name="PurchaseOrder_ID進貨單號" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Vendor_ID供應商編號" Type="int" />
+          <Property Name="OrderDate訂貨日期" Type="datetime" />
+          <Property Name="ShipMethod_ID運貨方式編號" Type="int" />
+          <Property Name="ShippingFee運費" Type="money" />
+          <Property Name="Done" Type="bit" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'SmartShopping.dbo.Returns' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="Returns">
+          <Key>
+            <PropertyRef Name="OrderDetail_ID訂單明細編號" />
+          </Key>
+          <Property Name="OrderDetail_ID訂單明細編號" Type="int" Nullable="false" />
+          <Property Name="Refund" Type="money" />
+          <Property Name="Reason" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReturnDate" Type="datetime" />
+          <Property Name="ReturnTime" Type="datetime" />
+          <Property Name="Done" Type="bit" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Roles_ID購物角色編號" />
+          </Key>
+          <Property Name="Roles_ID購物角色編號" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RolesName購物角色名稱" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RolesDetail">
+          <Key>
+            <PropertyRef Name="Roles_ID購物角色編號" />
+            <PropertyRef Name="Categories_ID分類編號" />
+          </Key>
+          <Property Name="Roles_ID購物角色編號" Type="int" Nullable="false" />
+          <Property Name="Categories_ID分類編號" Type="int" Nullable="false" />
+          <Property Name="SelectedCount選取次數" Type="int" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'SmartShopping.dbo.Royalty' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="Royalty">
+          <Key>
+            <PropertyRef Name="Member_ID會員編號" />
+          </Key>
+          <Property Name="Member_ID會員編號" Type="int" Nullable="false" />
+          <Property Name="MemberLevel會員等級" Type="int" />
+          <Property Name="LoginCount登入次數" Type="int" />
+          <Property Name="Coin紅利積點" Type="int" />
+        </EntityType>
+        <EntityType Name="ShipMethod">
+          <Key>
+            <PropertyRef Name="ShipMethod_ID運貨方式編號" />
+          </Key>
+          <Property Name="ShipMethod_ID運貨方式編號" Type="int" Nullable="false" />
+          <Property Name="ShipMethod運貨方式" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'SmartShopping.dbo.Shipping' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="Shipping">
+          <Key>
+            <PropertyRef Name="Order_ID訂單編號" />
+          </Key>
+          <Property Name="Order_ID訂單編號" Type="int" Nullable="false" />
+          <Property Name="ShippingFee運費" Type="money" />
+          <Property Name="ShippingAddress收貨地址" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShipMethod_ID運貨方式編號" Type="int" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'SmartShopping.dbo.SSBackEndAuthority' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="SSBackEndAuthority">
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="ProgramID" Type="int" />
+          <Property Name="Run" Type="bit" />
+          <Property Name="New" Type="bit" />
+          <Property Name="Edit" Type="bit" />
+          <Property Name="Report" Type="bit" />
+        </EntityType>-->
+        <EntityType Name="SSBackEndProgram">
+          <Key>
+            <PropertyRef Name="ProgramID" />
+          </Key>
+          <Property Name="ProgramID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProgramName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SSBackEndUser">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="Status_ID狀態編號" />
+          </Key>
+          <Property Name="Status_ID狀態編號" Type="int" Nullable="false" />
+          <Property Name="Status狀態" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Status_PurchaseOrder">
+          <Key>
+            <PropertyRef Name="Status_ID狀態編號" />
+          </Key>
+          <Property Name="Status_ID狀態編號" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Status狀態" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Vendors">
+          <Key>
+            <PropertyRef Name="Vendor_ID" />
+          </Key>
+          <Property Name="Vendor_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UnifiedBusinessNumbe" Type="nchar" MaxLength="10" />
+          <Property Name="VendorName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Representative" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="VendorPhone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="VendorAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PaymentMethod_ID" Type="int" />
+          <Property Name="VendorEmail" Type="nvarchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="回購週期">
+          <Key>
+            <PropertyRef Name="Repeat_ID回購週期編號" />
+          </Key>
+          <Property Name="Repeat_ID回購週期編號" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RepeatMonth回購週期(月)" Type="tinyint" />
+          <Property Name="RepeatDay回購週期(天)" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="回購週期設定紀錄">
+          <Key>
+            <PropertyRef Name="回_ID" />
+          </Key>
+          <Property Name="回_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="List_ID" Type="int" />
+          <Property Name="List_ID_Out" Type="int" />
+          <Property Name="Repeat_ID回購週期編號" Type="int" />
+          <Property Name="SetDate設定日" Type="datetime" />
+        </EntityType>
+        <EntityType Name="商品評論">
+          <Key>
+            <PropertyRef Name="Comment_ID商品評論編號" />
+          </Key>
+          <Property Name="Comment_ID商品評論編號" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Member_ID會員編號" Type="int" />
+          <Property Name="Product_ID商品編號" Type="int" />
+          <Property Name="Comment評論" Type="nvarchar(max)" />
+          <Property Name="Stars星級" Type="int" />
+        </EntityType>
+        <EntityType Name="設定來源">
+          <Key>
+            <PropertyRef Name="設定來源編號" />
+          </Key>
+          <Property Name="設定來源編號" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="設定來源" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Categories_Categories">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="Categories1" Type="Self.Categories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Categories_ID分類編號" />
+            </Principal>
+            <Dependent Role="Categories1">
+              <PropertyRef Name="上層分類編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Categories_設定來源">
+          <End Role="設定來源" Type="Self.設定來源" Multiplicity="0..1" />
+          <End Role="Categories" Type="Self.Categories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="設定來源">
+              <PropertyRef Name="設定來源編號" />
+            </Principal>
+            <Dependent Role="Categories">
+              <PropertyRef Name="設定來源編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_M_ShoppingList_Categories">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="InsideShoppingList" Type="Self.InsideShoppingList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Categories_ID分類編號" />
+            </Principal>
+            <Dependent Role="InsideShoppingList">
+              <PropertyRef Name="Category_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_M_ShoppingList_Member">
+          <End Role="Member" Type="Self.Member" Multiplicity="0..1" />
+          <End Role="InsideShoppingList" Type="Self.InsideShoppingList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Principal>
+            <Dependent Role="InsideShoppingList">
+              <PropertyRef Name="Member_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_M_ShoppingList_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="InsideShoppingList" Type="Self.InsideShoppingList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Principal>
+            <Dependent Role="InsideShoppingList">
+              <PropertyRef Name="Product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MemberRole_DefaultRoles">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="MemberRole" Type="Self.MemberRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Roles_ID購物角色編號" />
+            </Principal>
+            <Dependent Role="MemberRole">
+              <PropertyRef Name="Roles_ID購物角色編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MemberRole_Member">
+          <End Role="Member" Type="Self.Member" Multiplicity="1" />
+          <End Role="MemberRole" Type="Self.MemberRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Principal>
+            <Dependent Role="MemberRole">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_Orders">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="Order_ID訂單編號" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="Order_ID訂單編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_Status">
+          <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="Status_ID狀態編號" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="Status_ID狀態編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Member">
+          <End Role="Member" Type="Self.Member" Multiplicity="0..1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_PaymentMethod">
+          <End Role="PaymentMethod" Type="Self.PaymentMethod" Multiplicity="0..1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PaymentMethod">
+              <PropertyRef Name="PaymentMethod_ID付款方式編號" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="PaymentMethod_ID付款方式編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OutsideShoppingList_Categories">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="OutsideShoppingList" Type="Self.OutsideShoppingList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Categories_ID分類編號" />
+            </Principal>
+            <Dependent Role="OutsideShoppingList">
+              <PropertyRef Name="Category_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OutsideShoppingList_Member">
+          <End Role="Member" Type="Self.Member" Multiplicity="0..1" />
+          <End Role="OutsideShoppingList" Type="Self.OutsideShoppingList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Principal>
+            <Dependent Role="OutsideShoppingList">
+              <PropertyRef Name="Member_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--產生期間發現錯誤:
+錯誤 6004: 資料表 'SmartShopping.dbo.OutSide完成日紀錄' 被某個關聯性參考，但是找不到。
+        <Association Name="FK_OutSide完成日紀錄_OutsideShoppingList" />-->
+        <Association Name="FK_ProductPicture_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="ProductPicture" Type="Self.ProductPicture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Principal>
+            <Dependent Role="ProductPicture">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Brands">
+          <End Role="Brands" Type="Self.Brands" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brands">
+              <PropertyRef Name="Brand_ID品牌編號" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="Brand_ID品牌編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Categories">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Categories_ID分類編號" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="Categories_ID分類編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Vendors">
+          <End Role="Vendors" Type="Self.Vendors" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendors">
+              <PropertyRef Name="Vendor_ID" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="Vendor_ID供應商編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PromotionDetail_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="PromotionDetail" Type="Self.PromotionDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Principal>
+            <Dependent Role="PromotionDetail">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PromotionDetail_promotion">
+          <End Role="promotion" Type="Self.promotion" Multiplicity="1" />
+          <End Role="PromotionDetail" Type="Self.PromotionDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="promotion">
+              <PropertyRef Name="Promotion_ID商品促銷編號" />
+            </Principal>
+            <Dependent Role="PromotionDetail">
+              <PropertyRef Name="Promotion_ID商品促銷編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrderDetail進貨明細_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="PurchaseOrderDetail進貨明細" Type="Self.PurchaseOrderDetail進貨明細" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Principal>
+            <Dependent Role="PurchaseOrderDetail進貨明細">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrderDetail進貨明細_PurchaseOrder進貨單">
+          <End Role="PurchaseOrder進貨單" Type="Self.PurchaseOrder進貨單" Multiplicity="0..1" />
+          <End Role="PurchaseOrderDetail進貨明細" Type="Self.PurchaseOrderDetail進貨明細" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurchaseOrder進貨單">
+              <PropertyRef Name="PurchaseOrder_ID進貨單號" />
+            </Principal>
+            <Dependent Role="PurchaseOrderDetail進貨明細">
+              <PropertyRef Name="PurchaseOrder_ID進貨單號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrderDetail進貨明細_Status_PurchaseOrder">
+          <End Role="Status_PurchaseOrder" Type="Self.Status_PurchaseOrder" Multiplicity="0..1" />
+          <End Role="PurchaseOrderDetail進貨明細" Type="Self.PurchaseOrderDetail進貨明細" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status_PurchaseOrder">
+              <PropertyRef Name="Status_ID狀態編號" />
+            </Principal>
+            <Dependent Role="PurchaseOrderDetail進貨明細">
+              <PropertyRef Name="Status_ID狀態編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrder進貨單_ShipMethod">
+          <End Role="ShipMethod" Type="Self.ShipMethod" Multiplicity="0..1" />
+          <End Role="PurchaseOrder進貨單" Type="Self.PurchaseOrder進貨單" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ShipMethod">
+              <PropertyRef Name="ShipMethod_ID運貨方式編號" />
+            </Principal>
+            <Dependent Role="PurchaseOrder進貨單">
+              <PropertyRef Name="ShipMethod_ID運貨方式編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrder進貨單_Vendors">
+          <End Role="Vendors" Type="Self.Vendors" Multiplicity="0..1" />
+          <End Role="PurchaseOrder進貨單" Type="Self.PurchaseOrder進貨單" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendors">
+              <PropertyRef Name="Vendor_ID" />
+            </Principal>
+            <Dependent Role="PurchaseOrder進貨單">
+              <PropertyRef Name="Vendor_ID供應商編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Returns_OrderDetail">
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="1" />
+          <End Role="Returns" Type="Self.Returns" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="OrderDetail">
+              <PropertyRef Name="OrderDetail_ID訂單明細編號" />
+            </Principal>
+            <Dependent Role="Returns">
+              <PropertyRef Name="OrderDetail_ID訂單明細編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolesDetail_Categories">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+          <End Role="RolesDetail" Type="Self.RolesDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Categories_ID分類編號" />
+            </Principal>
+            <Dependent Role="RolesDetail">
+              <PropertyRef Name="Categories_ID分類編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolesDetail_Roles">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="RolesDetail" Type="Self.RolesDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Roles_ID購物角色編號" />
+            </Principal>
+            <Dependent Role="RolesDetail">
+              <PropertyRef Name="Roles_ID購物角色編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Royalty_Member">
+          <End Role="Member" Type="Self.Member" Multiplicity="1" />
+          <End Role="Royalty" Type="Self.Royalty" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Principal>
+            <Dependent Role="Royalty">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shipping_Orders">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="Shipping" Type="Self.Shipping" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="Order_ID訂單編號" />
+            </Principal>
+            <Dependent Role="Shipping">
+              <PropertyRef Name="Order_ID訂單編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shipping_ShipMethod">
+          <End Role="ShipMethod" Type="Self.ShipMethod" Multiplicity="0..1" />
+          <End Role="Shipping" Type="Self.Shipping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ShipMethod">
+              <PropertyRef Name="ShipMethod_ID運貨方式編號" />
+            </Principal>
+            <Dependent Role="Shipping">
+              <PropertyRef Name="ShipMethod_ID運貨方式編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--產生期間發現錯誤:
+錯誤 6004: 資料表 'SmartShopping.dbo.SSBackEndAuthority' 被某個關聯性參考，但是找不到。
+        <Association Name="FK_SSBackEndAuthority_SSBackEndProgram" />-->
+        <!--產生期間發現錯誤:
+錯誤 6004: 資料表 'SmartShopping.dbo.SSBackEndAuthority' 被某個關聯性參考，但是找不到。
+        <Association Name="FK_SSBackEndAuthority_SSBackEndUser" />-->
+        <Association Name="FK_Vendors_PaymentMethod">
+          <End Role="PaymentMethod" Type="Self.PaymentMethod" Multiplicity="0..1" />
+          <End Role="Vendors" Type="Self.Vendors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PaymentMethod">
+              <PropertyRef Name="PaymentMethod_ID付款方式編號" />
+            </Principal>
+            <Dependent Role="Vendors">
+              <PropertyRef Name="PaymentMethod_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_回購週期設定紀錄_InsideShoppingList">
+          <End Role="InsideShoppingList" Type="Self.InsideShoppingList" Multiplicity="0..1" />
+          <End Role="回購週期設定紀錄" Type="Self.回購週期設定紀錄" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InsideShoppingList">
+              <PropertyRef Name="List_ID" />
+            </Principal>
+            <Dependent Role="回購週期設定紀錄">
+              <PropertyRef Name="List_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_回購週期設定紀錄_OutsideShoppingList">
+          <End Role="OutsideShoppingList" Type="Self.OutsideShoppingList" Multiplicity="0..1" />
+          <End Role="回購週期設定紀錄" Type="Self.回購週期設定紀錄" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OutsideShoppingList">
+              <PropertyRef Name="List_ID_Out" />
+            </Principal>
+            <Dependent Role="回購週期設定紀錄">
+              <PropertyRef Name="List_ID_Out" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_回購週期設定紀錄_回購週期">
+          <End Role="回購週期" Type="Self.回購週期" Multiplicity="0..1" />
+          <End Role="回購週期設定紀錄" Type="Self.回購週期設定紀錄" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="回購週期">
+              <PropertyRef Name="Repeat_ID回購週期編號" />
+            </Principal>
+            <Dependent Role="回購週期設定紀錄">
+              <PropertyRef Name="Repeat_ID回購週期編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_商品評論_Member">
+          <End Role="Member" Type="Self.Member" Multiplicity="0..1" />
+          <End Role="商品評論" Type="Self.商品評論" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Principal>
+            <Dependent Role="商品評論">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_商品評論_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="商品評論" Type="Self.商品評論" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Principal>
+            <Dependent Role="商品評論">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SmartShoppingModelStoreContainer">
+          <EntitySet Name="Brands" EntityType="Self.Brands" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InsideShoppingList" EntityType="Self.InsideShoppingList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MemberRole" EntityType="Self.MemberRole" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OutsideShoppingList" EntityType="Self.OutsideShoppingList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PaymentMethod" EntityType="Self.PaymentMethod" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductPicture" EntityType="Self.ProductPicture" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="promotion" EntityType="Self.promotion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PromotionDetail" EntityType="Self.PromotionDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PurchaseOrderDetail進貨明細" EntityType="Self.PurchaseOrderDetail進貨明細" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PurchaseOrder進貨單" EntityType="Self.PurchaseOrder進貨單" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RolesDetail" EntityType="Self.RolesDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShipMethod" EntityType="Self.ShipMethod" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SSBackEndProgram" EntityType="Self.SSBackEndProgram" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SSBackEndUser" EntityType="Self.SSBackEndUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Status_PurchaseOrder" EntityType="Self.Status_PurchaseOrder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vendors" EntityType="Self.Vendors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="回購週期" EntityType="Self.回購週期" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="回購週期設定紀錄" EntityType="Self.回購週期設定紀錄" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="商品評論" EntityType="Self.商品評論" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="設定來源" EntityType="Self.設定來源" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Returns" EntityType="Self.Returns" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Returns].[OrderDetail_ID訂單明細編號] AS [OrderDetail_ID訂單明細編號], 
+    [Returns].[Refund] AS [Refund], 
+    [Returns].[Reason] AS [Reason], 
+    [Returns].[ReturnDate] AS [ReturnDate], 
+    [Returns].[ReturnTime] AS [ReturnTime], 
+    [Returns].[Done] AS [Done]
+    FROM [dbo].[Returns] AS [Returns]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Royalty" EntityType="Self.Royalty" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Royalty].[Member_ID會員編號] AS [Member_ID會員編號], 
+    [Royalty].[MemberLevel會員等級] AS [MemberLevel會員等級], 
+    [Royalty].[LoginCount登入次數] AS [LoginCount登入次數], 
+    [Royalty].[Coin紅利積點] AS [Coin紅利積點]
+    FROM [dbo].[Royalty] AS [Royalty]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Shipping" EntityType="Self.Shipping" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Shipping].[Order_ID訂單編號] AS [Order_ID訂單編號], 
+    [Shipping].[ShippingFee運費] AS [ShippingFee運費], 
+    [Shipping].[ShippingAddress收貨地址] AS [ShippingAddress收貨地址], 
+    [Shipping].[ShipMethod_ID運貨方式編號] AS [ShipMethod_ID運貨方式編號]
+    FROM [dbo].[Shipping] AS [Shipping]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Categories_Categories" Association="Self.FK_Categories_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Categories1" EntitySet="Categories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Categories_設定來源" Association="Self.FK_Categories_設定來源">
+            <End Role="設定來源" EntitySet="設定來源" />
+            <End Role="Categories" EntitySet="Categories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_M_ShoppingList_Categories" Association="Self.FK_M_ShoppingList_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="InsideShoppingList" EntitySet="InsideShoppingList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_M_ShoppingList_Member" Association="Self.FK_M_ShoppingList_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="InsideShoppingList" EntitySet="InsideShoppingList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_M_ShoppingList_Products" Association="Self.FK_M_ShoppingList_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="InsideShoppingList" EntitySet="InsideShoppingList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MemberRole_DefaultRoles" Association="Self.FK_MemberRole_DefaultRoles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="MemberRole" EntitySet="MemberRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MemberRole_Member" Association="Self.FK_MemberRole_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="MemberRole" EntitySet="MemberRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Orders" Association="Self.FK_OrderDetail_Orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Products" Association="Self.FK_OrderDetail_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Status" Association="Self.FK_OrderDetail_Status">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Member" Association="Self.FK_Orders_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_PaymentMethod" Association="Self.FK_Orders_PaymentMethod">
+            <End Role="PaymentMethod" EntitySet="PaymentMethod" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OutsideShoppingList_Categories" Association="Self.FK_OutsideShoppingList_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="OutsideShoppingList" EntitySet="OutsideShoppingList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OutsideShoppingList_Member" Association="Self.FK_OutsideShoppingList_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="OutsideShoppingList" EntitySet="OutsideShoppingList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductPicture_Products" Association="Self.FK_ProductPicture_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProductPicture" EntitySet="ProductPicture" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Brands" Association="Self.FK_Products_Brands">
+            <End Role="Brands" EntitySet="Brands" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Vendors" Association="Self.FK_Products_Vendors">
+            <End Role="Vendors" EntitySet="Vendors" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PromotionDetail_Products" Association="Self.FK_PromotionDetail_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="PromotionDetail" EntitySet="PromotionDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PromotionDetail_promotion" Association="Self.FK_PromotionDetail_promotion">
+            <End Role="promotion" EntitySet="promotion" />
+            <End Role="PromotionDetail" EntitySet="PromotionDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrderDetail進貨明細_Products" Association="Self.FK_PurchaseOrderDetail進貨明細_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="PurchaseOrderDetail進貨明細" EntitySet="PurchaseOrderDetail進貨明細" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrderDetail進貨明細_PurchaseOrder進貨單" Association="Self.FK_PurchaseOrderDetail進貨明細_PurchaseOrder進貨單">
+            <End Role="PurchaseOrder進貨單" EntitySet="PurchaseOrder進貨單" />
+            <End Role="PurchaseOrderDetail進貨明細" EntitySet="PurchaseOrderDetail進貨明細" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrderDetail進貨明細_Status_PurchaseOrder" Association="Self.FK_PurchaseOrderDetail進貨明細_Status_PurchaseOrder">
+            <End Role="Status_PurchaseOrder" EntitySet="Status_PurchaseOrder" />
+            <End Role="PurchaseOrderDetail進貨明細" EntitySet="PurchaseOrderDetail進貨明細" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrder進貨單_ShipMethod" Association="Self.FK_PurchaseOrder進貨單_ShipMethod">
+            <End Role="ShipMethod" EntitySet="ShipMethod" />
+            <End Role="PurchaseOrder進貨單" EntitySet="PurchaseOrder進貨單" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrder進貨單_Vendors" Association="Self.FK_PurchaseOrder進貨單_Vendors">
+            <End Role="Vendors" EntitySet="Vendors" />
+            <End Role="PurchaseOrder進貨單" EntitySet="PurchaseOrder進貨單" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Returns_OrderDetail" Association="Self.FK_Returns_OrderDetail">
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+            <End Role="Returns" EntitySet="Returns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolesDetail_Categories" Association="Self.FK_RolesDetail_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="RolesDetail" EntitySet="RolesDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolesDetail_Roles" Association="Self.FK_RolesDetail_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="RolesDetail" EntitySet="RolesDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Royalty_Member" Association="Self.FK_Royalty_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="Royalty" EntitySet="Royalty" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shipping_Orders" Association="Self.FK_Shipping_Orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="Shipping" EntitySet="Shipping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shipping_ShipMethod" Association="Self.FK_Shipping_ShipMethod">
+            <End Role="ShipMethod" EntitySet="ShipMethod" />
+            <End Role="Shipping" EntitySet="Shipping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vendors_PaymentMethod" Association="Self.FK_Vendors_PaymentMethod">
+            <End Role="PaymentMethod" EntitySet="PaymentMethod" />
+            <End Role="Vendors" EntitySet="Vendors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_回購週期設定紀錄_InsideShoppingList" Association="Self.FK_回購週期設定紀錄_InsideShoppingList">
+            <End Role="InsideShoppingList" EntitySet="InsideShoppingList" />
+            <End Role="回購週期設定紀錄" EntitySet="回購週期設定紀錄" />
+          </AssociationSet>
+          <AssociationSet Name="FK_回購週期設定紀錄_OutsideShoppingList" Association="Self.FK_回購週期設定紀錄_OutsideShoppingList">
+            <End Role="OutsideShoppingList" EntitySet="OutsideShoppingList" />
+            <End Role="回購週期設定紀錄" EntitySet="回購週期設定紀錄" />
+          </AssociationSet>
+          <AssociationSet Name="FK_回購週期設定紀錄_回購週期" Association="Self.FK_回購週期設定紀錄_回購週期">
+            <End Role="回購週期" EntitySet="回購週期" />
+            <End Role="回購週期設定紀錄" EntitySet="回購週期設定紀錄" />
+          </AssociationSet>
+          <AssociationSet Name="FK_商品評論_Member" Association="Self.FK_商品評論_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="商品評論" EntitySet="商品評論" />
+          </AssociationSet>
+          <AssociationSet Name="FK_商品評論_Products" Association="Self.FK_商品評論_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="商品評論" EntitySet="商品評論" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SmartShoppingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Brands">
+          <Key>
+            <PropertyRef Name="Brand_ID品牌編號" />
+          </Key>
+          <Property Name="Brand_ID品牌編號" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Brand_Name品牌名稱" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Picture品牌圖片" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Description品牌簡介" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_Products_Brands" FromRole="Brands" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="Categories_ID分類編號" />
+          </Key>
+          <Property Name="Categories_ID分類編號" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoriesName商品分類" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="上層分類編號" Type="Int32" />
+          <Property Name="設定來源編號" Type="Int32" />
+          <NavigationProperty Name="Categories1" Relationship="Self.FK_Categories_Categories" FromRole="Categories" ToRole="Categories1" />
+          <NavigationProperty Name="Categories2" Relationship="Self.FK_Categories_Categories" FromRole="Categories1" ToRole="Categories" />
+          <NavigationProperty Name="設定來源" Relationship="Self.FK_Categories_設定來源" FromRole="Categories" ToRole="設定來源" />
+          <NavigationProperty Name="InsideShoppingList" Relationship="Self.FK_M_ShoppingList_Categories" FromRole="Categories" ToRole="InsideShoppingList" />
+          <NavigationProperty Name="OutsideShoppingList" Relationship="Self.FK_OutsideShoppingList_Categories" FromRole="Categories" ToRole="OutsideShoppingList" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_Products_Categories" FromRole="Categories" ToRole="Products" />
+          <NavigationProperty Name="RolesDetail" Relationship="Self.FK_RolesDetail_Categories" FromRole="Categories" ToRole="RolesDetail" />
+        </EntityType>
+        <EntityType Name="InsideShoppingList">
+          <Key>
+            <PropertyRef Name="List_ID" />
+          </Key>
+          <Property Name="List_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Member_ID" Type="Int32" />
+          <Property Name="Category_ID" Type="Int32" />
+          <Property Name="Product_ID" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Next_Date" Type="DateTime" Precision="3" />
+          <Property Name="Quantity" Type="Int32" />
+          <NavigationProperty Name="Categories" Relationship="Self.FK_M_ShoppingList_Categories" FromRole="InsideShoppingList" ToRole="Categories" />
+          <NavigationProperty Name="Member" Relationship="Self.FK_M_ShoppingList_Member" FromRole="InsideShoppingList" ToRole="Member" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_M_ShoppingList_Products" FromRole="InsideShoppingList" ToRole="Products" />
+          <NavigationProperty Name="回購週期設定紀錄" Relationship="Self.FK_回購週期設定紀錄_InsideShoppingList" FromRole="InsideShoppingList" ToRole="回購週期設定紀錄" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="Member_ID會員編號" />
+          </Key>
+          <Property Name="Member_ID會員編號" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MemberName會員姓名" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Username登入帳號" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password登入密碼" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Salt" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Birthyear出生年" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Birthdate出生日期" Type="DateTime" Precision="3" />
+          <Property Name="Phone電話" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address地址" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShippingAddress收貨地址" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="M_Picture會員相片" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="InsideShoppingList" Relationship="Self.FK_M_ShoppingList_Member" FromRole="Member" ToRole="InsideShoppingList" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Member" FromRole="Member" ToRole="Orders" />
+          <NavigationProperty Name="OutsideShoppingList" Relationship="Self.FK_OutsideShoppingList_Member" FromRole="Member" ToRole="OutsideShoppingList" />
+          <NavigationProperty Name="Royalty" Relationship="Self.FK_Royalty_Member" FromRole="Member" ToRole="Royalty" />
+          <NavigationProperty Name="商品評論" Relationship="Self.FK_商品評論_Member" FromRole="Member" ToRole="商品評論" />
+          <NavigationProperty Name="Roles" Relationship="Self.MemberRole" FromRole="Member" ToRole="Roles" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="OrderDetail_ID訂單明細編號" />
+          </Key>
+          <Property Name="OrderDetail_ID訂單明細編號" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Order_ID訂單編號" Type="Int32" />
+          <Property Name="Product_ID商品編號" Type="Int32" Nullable="false" />
+          <Property Name="Status_ID狀態編號" Type="Int32" />
+          <Property Name="UnitPrice單價" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Quantity數量" Type="Int32" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK_OrderDetail_Orders" FromRole="OrderDetail" ToRole="Orders" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_OrderDetail_Products" FromRole="OrderDetail" ToRole="Products" />
+          <NavigationProperty Name="Status" Relationship="Self.FK_OrderDetail_Status" FromRole="OrderDetail" ToRole="Status" />
+          <NavigationProperty Name="Returns" Relationship="Self.FK_Returns_OrderDetail" FromRole="OrderDetail" ToRole="Returns" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="Order_ID訂單編號" />
+          </Key>
+          <Property Name="Order_ID訂單編號" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Member_ID會員編號" Type="Int32" />
+          <Property Name="OrderDate訂貨日期" Type="DateTime" Precision="3" />
+          <Property Name="Date預計到貨日期" Type="DateTime" Precision="3" />
+          <Property Name="PaymentMethod_ID付款方式編號" Type="Int32" />
+          <Property Name="Done" Type="Boolean" />
+          <Property Name="Status_ID狀態編號" Type="Int32" />
+          <NavigationProperty Name="Member" Relationship="Self.FK_Orders_Member" FromRole="Orders" ToRole="Member" />
+          <NavigationProperty Name="OrderDetail" Relationship="Self.FK_OrderDetail_Orders" FromRole="Orders" ToRole="OrderDetail" />
+          <NavigationProperty Name="PaymentMethod" Relationship="Self.FK_Orders_PaymentMethod" FromRole="Orders" ToRole="PaymentMethod" />
+          <NavigationProperty Name="Shipping" Relationship="Self.FK_Shipping_Orders" FromRole="Orders" ToRole="Shipping" />
+        </EntityType>
+        <EntityType Name="OutsideShoppingList">
+          <Key>
+            <PropertyRef Name="List_ID_Out" />
+          </Key>
+          <Property Name="List_ID_Out" Type="Int32" Nullable="false" />
+          <Property Name="Member_ID" Type="Int32" />
+          <Property Name="Category_ID" Type="Int32" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Next_Date下次提醒日" Type="DateTime" Precision="3" />
+          <Property Name="Active回購提醒" Type="Boolean" />
+          <NavigationProperty Name="Categories" Relationship="Self.FK_OutsideShoppingList_Categories" FromRole="OutsideShoppingList" ToRole="Categories" />
+          <NavigationProperty Name="Member" Relationship="Self.FK_OutsideShoppingList_Member" FromRole="OutsideShoppingList" ToRole="Member" />
+          <NavigationProperty Name="回購週期設定紀錄" Relationship="Self.FK_回購週期設定紀錄_OutsideShoppingList" FromRole="OutsideShoppingList" ToRole="回購週期設定紀錄" />
+        </EntityType>
+        <EntityType Name="PaymentMethod">
+          <Key>
+            <PropertyRef Name="PaymentMethod_ID付款方式編號" />
+          </Key>
+          <Property Name="PaymentMethod_ID付款方式編號" Type="Int32" Nullable="false" />
+          <Property Name="PaymentMethod付款方式" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_PaymentMethod" FromRole="PaymentMethod" ToRole="Orders" />
+          <NavigationProperty Name="Vendors" Relationship="Self.FK_Vendors_PaymentMethod" FromRole="PaymentMethod" ToRole="Vendors" />
+        </EntityType>
+        <EntityType Name="ProductPicture">
+          <Key>
+            <PropertyRef Name="Picture_ID商品圖片編號" />
+          </Key>
+          <Property Name="Picture_ID商品圖片編號" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Product_ID商品編號" Type="Int32" Nullable="false" />
+          <Property Name="Picture圖片" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_ProductPicture_Products" FromRole="ProductPicture" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="Product_ID商品編號" />
+          </Key>
+          <Property Name="Product_ID商品編號" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName商品名稱" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Categories_ID分類編號" Type="Int32" Nullable="false" />
+          <Property Name="UnitPrice單價" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="Stock庫存量" Type="Int32" Nullable="false" />
+          <Property Name="Description商品描述" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Vendor_ID供應商編號" Type="Int32" />
+          <Property Name="Brand_ID品牌編號" Type="Int32" />
+          <Property Name="QtyperUnit包裝數量" Type="Int32" />
+          <Property Name="Start上架日" Type="DateTime" Precision="3" />
+          <Property Name="End下架日" Type="DateTime" Precision="3" />
+          <Property Name="Discontinued" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Brands" Relationship="Self.FK_Products_Brands" FromRole="Products" ToRole="Brands" />
+          <NavigationProperty Name="Categories" Relationship="Self.FK_Products_Categories" FromRole="Products" ToRole="Categories" />
+          <NavigationProperty Name="InsideShoppingList" Relationship="Self.FK_M_ShoppingList_Products" FromRole="Products" ToRole="InsideShoppingList" />
+          <NavigationProperty Name="OrderDetail" Relationship="Self.FK_OrderDetail_Products" FromRole="Products" ToRole="OrderDetail" />
+          <NavigationProperty Name="ProductPicture" Relationship="Self.FK_ProductPicture_Products" FromRole="Products" ToRole="ProductPicture" />
+          <NavigationProperty Name="Vendors" Relationship="Self.FK_Products_Vendors" FromRole="Products" ToRole="Vendors" />
+          <NavigationProperty Name="PurchaseOrderDetail進貨明細" Relationship="Self.FK_PurchaseOrderDetail進貨明細_Products" FromRole="Products" ToRole="PurchaseOrderDetail進貨明細" />
+          <NavigationProperty Name="商品評論" Relationship="Self.FK_商品評論_Products" FromRole="Products" ToRole="商品評論" />
+          <NavigationProperty Name="promotion" Relationship="Self.PromotionDetail" FromRole="Products" ToRole="promotion" />
+        </EntityType>
+        <EntityType Name="promotion">
+          <Key>
+            <PropertyRef Name="Promotion_ID商品促銷編號" />
+          </Key>
+          <Property Name="Promotion_ID商品促銷編號" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description描述" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type類型" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate起始日" Type="DateTime" Precision="3" />
+          <Property Name="EndDate終止日" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Products" Relationship="Self.PromotionDetail" FromRole="promotion" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="PurchaseOrderDetail進貨明細">
+          <Key>
+            <PropertyRef Name="PurchaseOrderDetail_ID" />
+          </Key>
+          <Property Name="PurchaseOrderDetail_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PurchaseOrder_ID進貨單號" Type="Int32" />
+          <Property Name="Product_ID商品編號" Type="Int32" />
+          <Property Name="Status_ID狀態編號" Type="Int32" />
+          <Property Name="UnitPrice單價" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="OrderQuantity數量" Type="Int32" />
+          <Property Name="ReceivedQuantity到貨量" Type="Int32" />
+          <Property Name="DueDate交期" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_PurchaseOrderDetail進貨明細_Products" FromRole="PurchaseOrderDetail進貨明細" ToRole="Products" />
+          <NavigationProperty Name="PurchaseOrder進貨單" Relationship="Self.FK_PurchaseOrderDetail進貨明細_PurchaseOrder進貨單" FromRole="PurchaseOrderDetail進貨明細" ToRole="PurchaseOrder進貨單" />
+          <NavigationProperty Name="Status_PurchaseOrder" Relationship="Self.FK_PurchaseOrderDetail進貨明細_Status_PurchaseOrder" FromRole="PurchaseOrderDetail進貨明細" ToRole="Status_PurchaseOrder" />
+        </EntityType>
+        <EntityType Name="PurchaseOrder進貨單">
+          <Key>
+            <PropertyRef Name="PurchaseOrder_ID進貨單號" />
+          </Key>
+          <Property Name="PurchaseOrder_ID進貨單號" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Vendor_ID供應商編號" Type="Int32" />
+          <Property Name="OrderDate訂貨日期" Type="DateTime" Precision="3" />
+          <Property Name="ShipMethod_ID運貨方式編號" Type="Int32" />
+          <Property Name="ShippingFee運費" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Done" Type="Boolean" />
+          <NavigationProperty Name="PurchaseOrderDetail進貨明細" Relationship="Self.FK_PurchaseOrderDetail進貨明細_PurchaseOrder進貨單" FromRole="PurchaseOrder進貨單" ToRole="PurchaseOrderDetail進貨明細" />
+          <NavigationProperty Name="ShipMethod" Relationship="Self.FK_PurchaseOrder進貨單_ShipMethod" FromRole="PurchaseOrder進貨單" ToRole="ShipMethod" />
+          <NavigationProperty Name="Vendors" Relationship="Self.FK_PurchaseOrder進貨單_Vendors" FromRole="PurchaseOrder進貨單" ToRole="Vendors" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Roles_ID購物角色編號" />
+          </Key>
+          <Property Name="Roles_ID購物角色編號" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RolesName購物角色名稱" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="RolesDetail" Relationship="Self.FK_RolesDetail_Roles" FromRole="Roles" ToRole="RolesDetail" />
+          <NavigationProperty Name="Member" Relationship="Self.MemberRole" FromRole="Roles" ToRole="Member" />
+        </EntityType>
+        <EntityType Name="RolesDetail">
+          <Key>
+            <PropertyRef Name="Roles_ID購物角色編號" />
+            <PropertyRef Name="Categories_ID分類編號" />
+          </Key>
+          <Property Name="Roles_ID購物角色編號" Type="Int32" Nullable="false" />
+          <Property Name="Categories_ID分類編號" Type="Int32" Nullable="false" />
+          <Property Name="SelectedCount選取次數" Type="Int32" />
+          <NavigationProperty Name="Categories" Relationship="Self.FK_RolesDetail_Categories" FromRole="RolesDetail" ToRole="Categories" />
+          <NavigationProperty Name="Roles" Relationship="Self.FK_RolesDetail_Roles" FromRole="RolesDetail" ToRole="Roles" />
+        </EntityType>
+        <EntityType Name="ShipMethod">
+          <Key>
+            <PropertyRef Name="ShipMethod_ID運貨方式編號" />
+          </Key>
+          <Property Name="ShipMethod_ID運貨方式編號" Type="Int32" Nullable="false" />
+          <Property Name="ShipMethod運貨方式" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PurchaseOrder進貨單" Relationship="Self.FK_PurchaseOrder進貨單_ShipMethod" FromRole="ShipMethod" ToRole="PurchaseOrder進貨單" />
+          <NavigationProperty Name="Shipping" Relationship="Self.FK_Shipping_ShipMethod" FromRole="ShipMethod" ToRole="Shipping" />
+        </EntityType>
+        <EntityType Name="SSBackEndProgram">
+          <Key>
+            <PropertyRef Name="ProgramID" />
+          </Key>
+          <Property Name="ProgramID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProgramName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SSBackEndUser">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="Status_ID狀態編號" />
+          </Key>
+          <Property Name="Status_ID狀態編號" Type="Int32" Nullable="false" />
+          <Property Name="Status狀態" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="OrderDetail" Relationship="Self.FK_OrderDetail_Status" FromRole="Status" ToRole="OrderDetail" />
+        </EntityType>
+        <EntityType Name="Status_PurchaseOrder">
+          <Key>
+            <PropertyRef Name="Status_ID狀態編號" />
+          </Key>
+          <Property Name="Status_ID狀態編號" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status狀態" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PurchaseOrderDetail進貨明細" Relationship="Self.FK_PurchaseOrderDetail進貨明細_Status_PurchaseOrder" FromRole="Status_PurchaseOrder" ToRole="PurchaseOrderDetail進貨明細" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Vendors">
+          <Key>
+            <PropertyRef Name="Vendor_ID" />
+          </Key>
+          <Property Name="Vendor_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UnifiedBusinessNumbe" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="VendorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Representative" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VendorPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VendorAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PaymentMethod_ID" Type="Int32" />
+          <Property Name="VendorEmail" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PaymentMethod" Relationship="Self.FK_Vendors_PaymentMethod" FromRole="Vendors" ToRole="PaymentMethod" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_Products_Vendors" FromRole="Vendors" ToRole="Products" />
+          <NavigationProperty Name="PurchaseOrder進貨單" Relationship="Self.FK_PurchaseOrder進貨單_Vendors" FromRole="Vendors" ToRole="PurchaseOrder進貨單" />
+        </EntityType>
+        <EntityType Name="回購週期">
+          <Key>
+            <PropertyRef Name="Repeat_ID回購週期編號" />
+          </Key>
+          <Property Name="Repeat_ID回購週期編號" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RepeatMonth回購週期_月_" Type="Byte" />
+          <Property Name="RepeatDay回購週期_天_" Type="Byte" />
+          <NavigationProperty Name="回購週期設定紀錄" Relationship="Self.FK_回購週期設定紀錄_回購週期" FromRole="回購週期" ToRole="回購週期設定紀錄" />
+        </EntityType>
+        <EntityType Name="回購週期設定紀錄">
+          <Key>
+            <PropertyRef Name="回_ID" />
+          </Key>
+          <Property Name="回_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="List_ID" Type="Int32" />
+          <Property Name="List_ID_Out" Type="Int32" />
+          <Property Name="Repeat_ID回購週期編號" Type="Int32" />
+          <Property Name="SetDate設定日" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="InsideShoppingList" Relationship="Self.FK_回購週期設定紀錄_InsideShoppingList" FromRole="回購週期設定紀錄" ToRole="InsideShoppingList" />
+          <NavigationProperty Name="OutsideShoppingList" Relationship="Self.FK_回購週期設定紀錄_OutsideShoppingList" FromRole="回購週期設定紀錄" ToRole="OutsideShoppingList" />
+          <NavigationProperty Name="回購週期" Relationship="Self.FK_回購週期設定紀錄_回購週期" FromRole="回購週期設定紀錄" ToRole="回購週期" />
+        </EntityType>
+        <EntityType Name="商品評論">
+          <Key>
+            <PropertyRef Name="Comment_ID商品評論編號" />
+          </Key>
+          <Property Name="Comment_ID商品評論編號" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Member_ID會員編號" Type="Int32" />
+          <Property Name="Product_ID商品編號" Type="Int32" />
+          <Property Name="Comment評論" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Stars星級" Type="Int32" />
+          <NavigationProperty Name="Member" Relationship="Self.FK_商品評論_Member" FromRole="商品評論" ToRole="Member" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_商品評論_Products" FromRole="商品評論" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="設定來源">
+          <Key>
+            <PropertyRef Name="設定來源編號" />
+          </Key>
+          <Property Name="設定來源編號" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="設定來源1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Categories" Relationship="Self.FK_Categories_設定來源" FromRole="設定來源" ToRole="Categories" />
+        </EntityType>
+        <EntityType Name="Returns">
+          <Key>
+            <PropertyRef Name="OrderDetail_ID訂單明細編號" />
+          </Key>
+          <Property Name="OrderDetail_ID訂單明細編號" Type="Int32" Nullable="false" />
+          <Property Name="Refund" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Reason" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReturnDate" Type="DateTime" Precision="3" />
+          <Property Name="ReturnTime" Type="DateTime" Precision="3" />
+          <Property Name="Done" Type="Boolean" />
+          <NavigationProperty Name="OrderDetail" Relationship="Self.FK_Returns_OrderDetail" FromRole="Returns" ToRole="OrderDetail" />
+        </EntityType>
+        <EntityType Name="Royalty">
+          <Key>
+            <PropertyRef Name="Member_ID會員編號" />
+          </Key>
+          <Property Name="Member_ID會員編號" Type="Int32" Nullable="false" />
+          <Property Name="MemberLevel會員等級" Type="Int32" />
+          <Property Name="LoginCount登入次數" Type="Int32" />
+          <Property Name="Coin紅利積點" Type="Int32" />
+          <NavigationProperty Name="Member" Relationship="Self.FK_Royalty_Member" FromRole="Royalty" ToRole="Member" />
+        </EntityType>
+        <EntityType Name="Shipping">
+          <Key>
+            <PropertyRef Name="Order_ID訂單編號" />
+          </Key>
+          <Property Name="Order_ID訂單編號" Type="Int32" Nullable="false" />
+          <Property Name="ShippingFee運費" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ShippingAddress收貨地址" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShipMethod_ID運貨方式編號" Type="Int32" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK_Shipping_Orders" FromRole="Shipping" ToRole="Orders" />
+          <NavigationProperty Name="ShipMethod" Relationship="Self.FK_Shipping_ShipMethod" FromRole="Shipping" ToRole="ShipMethod" />
+        </EntityType>
+        <Association Name="FK_Products_Brands">
+          <End Role="Brands" Type="Self.Brands" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brands">
+              <PropertyRef Name="Brand_ID品牌編號" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="Brand_ID品牌編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Categories_Categories">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="Categories1" Type="Self.Categories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Categories_ID分類編號" />
+            </Principal>
+            <Dependent Role="Categories1">
+              <PropertyRef Name="上層分類編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Categories_設定來源">
+          <End Role="設定來源" Type="Self.設定來源" Multiplicity="0..1" />
+          <End Role="Categories" Type="Self.Categories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="設定來源">
+              <PropertyRef Name="設定來源編號" />
+            </Principal>
+            <Dependent Role="Categories">
+              <PropertyRef Name="設定來源編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_M_ShoppingList_Categories">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="InsideShoppingList" Type="Self.InsideShoppingList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Categories_ID分類編號" />
+            </Principal>
+            <Dependent Role="InsideShoppingList">
+              <PropertyRef Name="Category_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OutsideShoppingList_Categories">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="OutsideShoppingList" Type="Self.OutsideShoppingList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Categories_ID分類編號" />
+            </Principal>
+            <Dependent Role="OutsideShoppingList">
+              <PropertyRef Name="Category_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Categories">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Categories_ID分類編號" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="Categories_ID分類編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolesDetail_Categories">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+          <End Role="RolesDetail" Type="Self.RolesDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Categories_ID分類編號" />
+            </Principal>
+            <Dependent Role="RolesDetail">
+              <PropertyRef Name="Categories_ID分類編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_M_ShoppingList_Member">
+          <End Role="Member" Type="Self.Member" Multiplicity="0..1" />
+          <End Role="InsideShoppingList" Type="Self.InsideShoppingList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Principal>
+            <Dependent Role="InsideShoppingList">
+              <PropertyRef Name="Member_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_M_ShoppingList_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="InsideShoppingList" Type="Self.InsideShoppingList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Principal>
+            <Dependent Role="InsideShoppingList">
+              <PropertyRef Name="Product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_回購週期設定紀錄_InsideShoppingList">
+          <End Role="InsideShoppingList" Type="Self.InsideShoppingList" Multiplicity="0..1" />
+          <End Role="回購週期設定紀錄" Type="Self.回購週期設定紀錄" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InsideShoppingList">
+              <PropertyRef Name="List_ID" />
+            </Principal>
+            <Dependent Role="回購週期設定紀錄">
+              <PropertyRef Name="List_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Member">
+          <End Role="Member" Type="Self.Member" Multiplicity="0..1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OutsideShoppingList_Member">
+          <End Role="Member" Type="Self.Member" Multiplicity="0..1" />
+          <End Role="OutsideShoppingList" Type="Self.OutsideShoppingList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Principal>
+            <Dependent Role="OutsideShoppingList">
+              <PropertyRef Name="Member_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Royalty_Member">
+          <End Role="Member" Type="Self.Member" Multiplicity="1" />
+          <End Role="Royalty" Type="Self.Royalty" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Principal>
+            <Dependent Role="Royalty">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_商品評論_Member">
+          <End Role="Member" Type="Self.Member" Multiplicity="0..1" />
+          <End Role="商品評論" Type="Self.商品評論" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Principal>
+            <Dependent Role="商品評論">
+              <PropertyRef Name="Member_ID會員編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_Orders">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="Order_ID訂單編號" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="Order_ID訂單編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_Status">
+          <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="Status_ID狀態編號" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="Status_ID狀態編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Returns_OrderDetail">
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="1" />
+          <End Role="Returns" Type="Self.Returns" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="OrderDetail">
+              <PropertyRef Name="OrderDetail_ID訂單明細編號" />
+            </Principal>
+            <Dependent Role="Returns">
+              <PropertyRef Name="OrderDetail_ID訂單明細編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_PaymentMethod">
+          <End Role="PaymentMethod" Type="Self.PaymentMethod" Multiplicity="0..1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PaymentMethod">
+              <PropertyRef Name="PaymentMethod_ID付款方式編號" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="PaymentMethod_ID付款方式編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shipping_Orders">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="Shipping" Type="Self.Shipping" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="Order_ID訂單編號" />
+            </Principal>
+            <Dependent Role="Shipping">
+              <PropertyRef Name="Order_ID訂單編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_回購週期設定紀錄_OutsideShoppingList">
+          <End Role="OutsideShoppingList" Type="Self.OutsideShoppingList" Multiplicity="0..1" />
+          <End Role="回購週期設定紀錄" Type="Self.回購週期設定紀錄" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OutsideShoppingList">
+              <PropertyRef Name="List_ID_Out" />
+            </Principal>
+            <Dependent Role="回購週期設定紀錄">
+              <PropertyRef Name="List_ID_Out" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vendors_PaymentMethod">
+          <End Role="PaymentMethod" Type="Self.PaymentMethod" Multiplicity="0..1" />
+          <End Role="Vendors" Type="Self.Vendors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PaymentMethod">
+              <PropertyRef Name="PaymentMethod_ID付款方式編號" />
+            </Principal>
+            <Dependent Role="Vendors">
+              <PropertyRef Name="PaymentMethod_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductPicture_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="ProductPicture" Type="Self.ProductPicture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Principal>
+            <Dependent Role="ProductPicture">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Vendors">
+          <End Role="Vendors" Type="Self.Vendors" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendors">
+              <PropertyRef Name="Vendor_ID" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="Vendor_ID供應商編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrderDetail進貨明細_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="PurchaseOrderDetail進貨明細" Type="Self.PurchaseOrderDetail進貨明細" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Principal>
+            <Dependent Role="PurchaseOrderDetail進貨明細">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_商品評論_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="商品評論" Type="Self.商品評論" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Principal>
+            <Dependent Role="商品評論">
+              <PropertyRef Name="Product_ID商品編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrderDetail進貨明細_PurchaseOrder進貨單">
+          <End Role="PurchaseOrder進貨單" Type="Self.PurchaseOrder進貨單" Multiplicity="0..1" />
+          <End Role="PurchaseOrderDetail進貨明細" Type="Self.PurchaseOrderDetail進貨明細" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurchaseOrder進貨單">
+              <PropertyRef Name="PurchaseOrder_ID進貨單號" />
+            </Principal>
+            <Dependent Role="PurchaseOrderDetail進貨明細">
+              <PropertyRef Name="PurchaseOrder_ID進貨單號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrderDetail進貨明細_Status_PurchaseOrder">
+          <End Role="Status_PurchaseOrder" Type="Self.Status_PurchaseOrder" Multiplicity="0..1" />
+          <End Role="PurchaseOrderDetail進貨明細" Type="Self.PurchaseOrderDetail進貨明細" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status_PurchaseOrder">
+              <PropertyRef Name="Status_ID狀態編號" />
+            </Principal>
+            <Dependent Role="PurchaseOrderDetail進貨明細">
+              <PropertyRef Name="Status_ID狀態編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrder進貨單_ShipMethod">
+          <End Role="ShipMethod" Type="Self.ShipMethod" Multiplicity="0..1" />
+          <End Role="PurchaseOrder進貨單" Type="Self.PurchaseOrder進貨單" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ShipMethod">
+              <PropertyRef Name="ShipMethod_ID運貨方式編號" />
+            </Principal>
+            <Dependent Role="PurchaseOrder進貨單">
+              <PropertyRef Name="ShipMethod_ID運貨方式編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrder進貨單_Vendors">
+          <End Role="Vendors" Type="Self.Vendors" Multiplicity="0..1" />
+          <End Role="PurchaseOrder進貨單" Type="Self.PurchaseOrder進貨單" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendors">
+              <PropertyRef Name="Vendor_ID" />
+            </Principal>
+            <Dependent Role="PurchaseOrder進貨單">
+              <PropertyRef Name="Vendor_ID供應商編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolesDetail_Roles">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="RolesDetail" Type="Self.RolesDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Roles_ID購物角色編號" />
+            </Principal>
+            <Dependent Role="RolesDetail">
+              <PropertyRef Name="Roles_ID購物角色編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shipping_ShipMethod">
+          <End Role="ShipMethod" Type="Self.ShipMethod" Multiplicity="0..1" />
+          <End Role="Shipping" Type="Self.Shipping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ShipMethod">
+              <PropertyRef Name="ShipMethod_ID運貨方式編號" />
+            </Principal>
+            <Dependent Role="Shipping">
+              <PropertyRef Name="ShipMethod_ID運貨方式編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_回購週期設定紀錄_回購週期">
+          <End Role="回購週期" Type="Self.回購週期" Multiplicity="0..1" />
+          <End Role="回購週期設定紀錄" Type="Self.回購週期設定紀錄" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="回購週期">
+              <PropertyRef Name="Repeat_ID回購週期編號" />
+            </Principal>
+            <Dependent Role="回購週期設定紀錄">
+              <PropertyRef Name="Repeat_ID回購週期編號" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MemberRole">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="*" />
+          <End Role="Member" Type="Self.Member" Multiplicity="*" />
+        </Association>
+        <Association Name="PromotionDetail">
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <End Role="promotion" Type="Self.promotion" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="SmartShoppingEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Brands" EntityType="Self.Brands" />
+          <EntitySet Name="Categories" EntityType="Self.Categories" />
+          <EntitySet Name="InsideShoppingList" EntityType="Self.InsideShoppingList" />
+          <EntitySet Name="Member" EntityType="Self.Member" />
+          <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" />
+          <EntitySet Name="OutsideShoppingList" EntityType="Self.OutsideShoppingList" />
+          <EntitySet Name="PaymentMethod" EntityType="Self.PaymentMethod" />
+          <EntitySet Name="ProductPicture" EntityType="Self.ProductPicture" />
+          <EntitySet Name="Products" EntityType="Self.Products" />
+          <EntitySet Name="promotion" EntityType="Self.promotion" />
+          <EntitySet Name="PurchaseOrderDetail進貨明細" EntityType="Self.PurchaseOrderDetail進貨明細" />
+          <EntitySet Name="PurchaseOrder進貨單" EntityType="Self.PurchaseOrder進貨單" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" />
+          <EntitySet Name="RolesDetail" EntityType="Self.RolesDetail" />
+          <EntitySet Name="ShipMethod" EntityType="Self.ShipMethod" />
+          <EntitySet Name="SSBackEndProgram" EntityType="Self.SSBackEndProgram" />
+          <EntitySet Name="SSBackEndUser" EntityType="Self.SSBackEndUser" />
+          <EntitySet Name="Status" EntityType="Self.Status" />
+          <EntitySet Name="Status_PurchaseOrder" EntityType="Self.Status_PurchaseOrder" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Vendors" EntityType="Self.Vendors" />
+          <EntitySet Name="回購週期" EntityType="Self.回購週期" />
+          <EntitySet Name="回購週期設定紀錄" EntityType="Self.回購週期設定紀錄" />
+          <EntitySet Name="商品評論" EntityType="Self.商品評論" />
+          <EntitySet Name="設定來源" EntityType="Self.設定來源" />
+          <EntitySet Name="Returns" EntityType="Self.Returns" />
+          <EntitySet Name="Royalty" EntityType="Self.Royalty" />
+          <EntitySet Name="Shipping" EntityType="Self.Shipping" />
+          <AssociationSet Name="FK_Products_Brands" Association="Self.FK_Products_Brands">
+            <End Role="Brands" EntitySet="Brands" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Categories_Categories" Association="Self.FK_Categories_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Categories1" EntitySet="Categories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Categories_設定來源" Association="Self.FK_Categories_設定來源">
+            <End Role="設定來源" EntitySet="設定來源" />
+            <End Role="Categories" EntitySet="Categories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_M_ShoppingList_Categories" Association="Self.FK_M_ShoppingList_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="InsideShoppingList" EntitySet="InsideShoppingList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OutsideShoppingList_Categories" Association="Self.FK_OutsideShoppingList_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="OutsideShoppingList" EntitySet="OutsideShoppingList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolesDetail_Categories" Association="Self.FK_RolesDetail_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="RolesDetail" EntitySet="RolesDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_M_ShoppingList_Member" Association="Self.FK_M_ShoppingList_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="InsideShoppingList" EntitySet="InsideShoppingList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_M_ShoppingList_Products" Association="Self.FK_M_ShoppingList_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="InsideShoppingList" EntitySet="InsideShoppingList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_回購週期設定紀錄_InsideShoppingList" Association="Self.FK_回購週期設定紀錄_InsideShoppingList">
+            <End Role="InsideShoppingList" EntitySet="InsideShoppingList" />
+            <End Role="回購週期設定紀錄" EntitySet="回購週期設定紀錄" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Member" Association="Self.FK_Orders_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OutsideShoppingList_Member" Association="Self.FK_OutsideShoppingList_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="OutsideShoppingList" EntitySet="OutsideShoppingList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Royalty_Member" Association="Self.FK_Royalty_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="Royalty" EntitySet="Royalty" />
+          </AssociationSet>
+          <AssociationSet Name="FK_商品評論_Member" Association="Self.FK_商品評論_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="商品評論" EntitySet="商品評論" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Orders" Association="Self.FK_OrderDetail_Orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Products" Association="Self.FK_OrderDetail_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Status" Association="Self.FK_OrderDetail_Status">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Returns_OrderDetail" Association="Self.FK_Returns_OrderDetail">
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+            <End Role="Returns" EntitySet="Returns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_PaymentMethod" Association="Self.FK_Orders_PaymentMethod">
+            <End Role="PaymentMethod" EntitySet="PaymentMethod" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shipping_Orders" Association="Self.FK_Shipping_Orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="Shipping" EntitySet="Shipping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_回購週期設定紀錄_OutsideShoppingList" Association="Self.FK_回購週期設定紀錄_OutsideShoppingList">
+            <End Role="OutsideShoppingList" EntitySet="OutsideShoppingList" />
+            <End Role="回購週期設定紀錄" EntitySet="回購週期設定紀錄" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vendors_PaymentMethod" Association="Self.FK_Vendors_PaymentMethod">
+            <End Role="PaymentMethod" EntitySet="PaymentMethod" />
+            <End Role="Vendors" EntitySet="Vendors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductPicture_Products" Association="Self.FK_ProductPicture_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProductPicture" EntitySet="ProductPicture" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Vendors" Association="Self.FK_Products_Vendors">
+            <End Role="Vendors" EntitySet="Vendors" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrderDetail進貨明細_Products" Association="Self.FK_PurchaseOrderDetail進貨明細_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="PurchaseOrderDetail進貨明細" EntitySet="PurchaseOrderDetail進貨明細" />
+          </AssociationSet>
+          <AssociationSet Name="FK_商品評論_Products" Association="Self.FK_商品評論_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="商品評論" EntitySet="商品評論" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrderDetail進貨明細_PurchaseOrder進貨單" Association="Self.FK_PurchaseOrderDetail進貨明細_PurchaseOrder進貨單">
+            <End Role="PurchaseOrder進貨單" EntitySet="PurchaseOrder進貨單" />
+            <End Role="PurchaseOrderDetail進貨明細" EntitySet="PurchaseOrderDetail進貨明細" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrderDetail進貨明細_Status_PurchaseOrder" Association="Self.FK_PurchaseOrderDetail進貨明細_Status_PurchaseOrder">
+            <End Role="Status_PurchaseOrder" EntitySet="Status_PurchaseOrder" />
+            <End Role="PurchaseOrderDetail進貨明細" EntitySet="PurchaseOrderDetail進貨明細" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrder進貨單_ShipMethod" Association="Self.FK_PurchaseOrder進貨單_ShipMethod">
+            <End Role="ShipMethod" EntitySet="ShipMethod" />
+            <End Role="PurchaseOrder進貨單" EntitySet="PurchaseOrder進貨單" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrder進貨單_Vendors" Association="Self.FK_PurchaseOrder進貨單_Vendors">
+            <End Role="Vendors" EntitySet="Vendors" />
+            <End Role="PurchaseOrder進貨單" EntitySet="PurchaseOrder進貨單" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolesDetail_Roles" Association="Self.FK_RolesDetail_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="RolesDetail" EntitySet="RolesDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shipping_ShipMethod" Association="Self.FK_Shipping_ShipMethod">
+            <End Role="ShipMethod" EntitySet="ShipMethod" />
+            <End Role="Shipping" EntitySet="Shipping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_回購週期設定紀錄_回購週期" Association="Self.FK_回購週期設定紀錄_回購週期">
+            <End Role="回購週期" EntitySet="回購週期" />
+            <End Role="回購週期設定紀錄" EntitySet="回購週期設定紀錄" />
+          </AssociationSet>
+          <AssociationSet Name="MemberRole" Association="Self.MemberRole">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Member" EntitySet="Member" />
+          </AssociationSet>
+          <AssociationSet Name="PromotionDetail" Association="Self.PromotionDetail">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="promotion" EntitySet="promotion" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SmartShoppingModelStoreContainer" CdmEntityContainer="SmartShoppingEntities2">
+          <EntitySetMapping Name="Brands">
+            <EntityTypeMapping TypeName="SmartShoppingModel.Brands">
+              <MappingFragment StoreEntitySet="Brands">
+                <ScalarProperty Name="Brand_ID品牌編號" ColumnName="Brand_ID品牌編號" />
+                <ScalarProperty Name="Brand_Name品牌名稱" ColumnName="Brand_Name品牌名稱" />
+                <ScalarProperty Name="Picture品牌圖片" ColumnName="Picture品牌圖片" />
+                <ScalarProperty Name="Description品牌簡介" ColumnName="Description品牌簡介" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="SmartShoppingModel.Categories">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="Categories_ID分類編號" ColumnName="Categories_ID分類編號" />
+                <ScalarProperty Name="CategoriesName商品分類" ColumnName="CategoriesName商品分類" />
+                <ScalarProperty Name="上層分類編號" ColumnName="上層分類編號" />
+                <ScalarProperty Name="設定來源編號" ColumnName="設定來源編號" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InsideShoppingList">
+            <EntityTypeMapping TypeName="SmartShoppingModel.InsideShoppingList">
+              <MappingFragment StoreEntitySet="InsideShoppingList">
+                <ScalarProperty Name="List_ID" ColumnName="List_ID" />
+                <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+                <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+                <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Next_Date" ColumnName="Next_Date" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Member">
+            <EntityTypeMapping TypeName="SmartShoppingModel.Member">
+              <MappingFragment StoreEntitySet="Member">
+                <ScalarProperty Name="Member_ID會員編號" ColumnName="Member_ID會員編號" />
+                <ScalarProperty Name="MemberName會員姓名" ColumnName="MemberName會員姓名" />
+                <ScalarProperty Name="Username登入帳號" ColumnName="Username登入帳號" />
+                <ScalarProperty Name="Password登入密碼" ColumnName="Password登入密碼" />
+                <ScalarProperty Name="Salt" ColumnName="Salt" />
+                <ScalarProperty Name="Birthyear出生年" ColumnName="Birthyear出生年" />
+                <ScalarProperty Name="Birthdate出生日期" ColumnName="Birthdate出生日期" />
+                <ScalarProperty Name="Phone電話" ColumnName="Phone電話" />
+                <ScalarProperty Name="Address地址" ColumnName="Address地址" />
+                <ScalarProperty Name="ShippingAddress收貨地址" ColumnName="ShippingAddress收貨地址" />
+                <ScalarProperty Name="M_Picture會員相片" ColumnName="M_Picture會員相片" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDetail">
+            <EntityTypeMapping TypeName="SmartShoppingModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetail">
+                <ScalarProperty Name="OrderDetail_ID訂單明細編號" ColumnName="OrderDetail_ID訂單明細編號" />
+                <ScalarProperty Name="Order_ID訂單編號" ColumnName="Order_ID訂單編號" />
+                <ScalarProperty Name="Product_ID商品編號" ColumnName="Product_ID商品編號" />
+                <ScalarProperty Name="Status_ID狀態編號" ColumnName="Status_ID狀態編號" />
+                <ScalarProperty Name="UnitPrice單價" ColumnName="UnitPrice單價" />
+                <ScalarProperty Name="Quantity數量" ColumnName="Quantity數量" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="SmartShoppingModel.Orders">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="Order_ID訂單編號" ColumnName="Order_ID訂單編號" />
+                <ScalarProperty Name="Member_ID會員編號" ColumnName="Member_ID會員編號" />
+                <ScalarProperty Name="OrderDate訂貨日期" ColumnName="OrderDate訂貨日期" />
+                <ScalarProperty Name="Date預計到貨日期" ColumnName="Date預計到貨日期" />
+                <ScalarProperty Name="PaymentMethod_ID付款方式編號" ColumnName="PaymentMethod_ID付款方式編號" />
+                <ScalarProperty Name="Done" ColumnName="Done" />
+                <ScalarProperty Name="Status_ID狀態編號" ColumnName="Status_ID狀態編號" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OutsideShoppingList">
+            <EntityTypeMapping TypeName="SmartShoppingModel.OutsideShoppingList">
+              <MappingFragment StoreEntitySet="OutsideShoppingList">
+                <ScalarProperty Name="List_ID_Out" ColumnName="List_ID_Out" />
+                <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+                <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Next_Date下次提醒日" ColumnName="Next_Date下次提醒日" />
+                <ScalarProperty Name="Active回購提醒" ColumnName="Active回購提醒" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentMethod">
+            <EntityTypeMapping TypeName="SmartShoppingModel.PaymentMethod">
+              <MappingFragment StoreEntitySet="PaymentMethod">
+                <ScalarProperty Name="PaymentMethod_ID付款方式編號" ColumnName="PaymentMethod_ID付款方式編號" />
+                <ScalarProperty Name="PaymentMethod付款方式" ColumnName="PaymentMethod付款方式" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductPicture">
+            <EntityTypeMapping TypeName="SmartShoppingModel.ProductPicture">
+              <MappingFragment StoreEntitySet="ProductPicture">
+                <ScalarProperty Name="Picture_ID商品圖片編號" ColumnName="Picture_ID商品圖片編號" />
+                <ScalarProperty Name="Product_ID商品編號" ColumnName="Product_ID商品編號" />
+                <ScalarProperty Name="Picture圖片" ColumnName="Picture圖片" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="SmartShoppingModel.Products">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="Product_ID商品編號" ColumnName="Product_ID商品編號" />
+                <ScalarProperty Name="ProductName商品名稱" ColumnName="ProductName商品名稱" />
+                <ScalarProperty Name="Categories_ID分類編號" ColumnName="Categories_ID分類編號" />
+                <ScalarProperty Name="UnitPrice單價" ColumnName="UnitPrice單價" />
+                <ScalarProperty Name="Stock庫存量" ColumnName="Stock庫存量" />
+                <ScalarProperty Name="Description商品描述" ColumnName="Description商品描述" />
+                <ScalarProperty Name="Vendor_ID供應商編號" ColumnName="Vendor_ID供應商編號" />
+                <ScalarProperty Name="Brand_ID品牌編號" ColumnName="Brand_ID品牌編號" />
+                <ScalarProperty Name="QtyperUnit包裝數量" ColumnName="QtyperUnit包裝數量" />
+                <ScalarProperty Name="Start上架日" ColumnName="Start上架日" />
+                <ScalarProperty Name="End下架日" ColumnName="End下架日" />
+                <ScalarProperty Name="Discontinued" ColumnName="Discontinued" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="promotion">
+            <EntityTypeMapping TypeName="SmartShoppingModel.promotion">
+              <MappingFragment StoreEntitySet="promotion">
+                <ScalarProperty Name="Promotion_ID商品促銷編號" ColumnName="Promotion_ID商品促銷編號" />
+                <ScalarProperty Name="Description描述" ColumnName="Description描述" />
+                <ScalarProperty Name="Type類型" ColumnName="Type類型" />
+                <ScalarProperty Name="StartDate起始日" ColumnName="StartDate起始日" />
+                <ScalarProperty Name="EndDate終止日" ColumnName="EndDate終止日" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseOrderDetail進貨明細">
+            <EntityTypeMapping TypeName="SmartShoppingModel.PurchaseOrderDetail進貨明細">
+              <MappingFragment StoreEntitySet="PurchaseOrderDetail進貨明細">
+                <ScalarProperty Name="PurchaseOrderDetail_ID" ColumnName="PurchaseOrderDetail_ID" />
+                <ScalarProperty Name="PurchaseOrder_ID進貨單號" ColumnName="PurchaseOrder_ID進貨單號" />
+                <ScalarProperty Name="Product_ID商品編號" ColumnName="Product_ID商品編號" />
+                <ScalarProperty Name="Status_ID狀態編號" ColumnName="Status_ID狀態編號" />
+                <ScalarProperty Name="UnitPrice單價" ColumnName="UnitPrice單價" />
+                <ScalarProperty Name="OrderQuantity數量" ColumnName="OrderQuantity數量" />
+                <ScalarProperty Name="ReceivedQuantity到貨量" ColumnName="ReceivedQuantity到貨量" />
+                <ScalarProperty Name="DueDate交期" ColumnName="DueDate交期" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseOrder進貨單">
+            <EntityTypeMapping TypeName="SmartShoppingModel.PurchaseOrder進貨單">
+              <MappingFragment StoreEntitySet="PurchaseOrder進貨單">
+                <ScalarProperty Name="PurchaseOrder_ID進貨單號" ColumnName="PurchaseOrder_ID進貨單號" />
+                <ScalarProperty Name="Vendor_ID供應商編號" ColumnName="Vendor_ID供應商編號" />
+                <ScalarProperty Name="OrderDate訂貨日期" ColumnName="OrderDate訂貨日期" />
+                <ScalarProperty Name="ShipMethod_ID運貨方式編號" ColumnName="ShipMethod_ID運貨方式編號" />
+                <ScalarProperty Name="ShippingFee運費" ColumnName="ShippingFee運費" />
+                <ScalarProperty Name="Done" ColumnName="Done" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="SmartShoppingModel.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="Roles_ID購物角色編號" ColumnName="Roles_ID購物角色編號" />
+                <ScalarProperty Name="RolesName購物角色名稱" ColumnName="RolesName購物角色名稱" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RolesDetail">
+            <EntityTypeMapping TypeName="SmartShoppingModel.RolesDetail">
+              <MappingFragment StoreEntitySet="RolesDetail">
+                <ScalarProperty Name="Roles_ID購物角色編號" ColumnName="Roles_ID購物角色編號" />
+                <ScalarProperty Name="Categories_ID分類編號" ColumnName="Categories_ID分類編號" />
+                <ScalarProperty Name="SelectedCount選取次數" ColumnName="SelectedCount選取次數" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShipMethod">
+            <EntityTypeMapping TypeName="SmartShoppingModel.ShipMethod">
+              <MappingFragment StoreEntitySet="ShipMethod">
+                <ScalarProperty Name="ShipMethod_ID運貨方式編號" ColumnName="ShipMethod_ID運貨方式編號" />
+                <ScalarProperty Name="ShipMethod運貨方式" ColumnName="ShipMethod運貨方式" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SSBackEndProgram">
+            <EntityTypeMapping TypeName="SmartShoppingModel.SSBackEndProgram">
+              <MappingFragment StoreEntitySet="SSBackEndProgram">
+                <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+                <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SSBackEndUser">
+            <EntityTypeMapping TypeName="SmartShoppingModel.SSBackEndUser">
+              <MappingFragment StoreEntitySet="SSBackEndUser">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Status">
+            <EntityTypeMapping TypeName="SmartShoppingModel.Status">
+              <MappingFragment StoreEntitySet="Status">
+                <ScalarProperty Name="Status_ID狀態編號" ColumnName="Status_ID狀態編號" />
+                <ScalarProperty Name="Status狀態" ColumnName="Status狀態" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Status_PurchaseOrder">
+            <EntityTypeMapping TypeName="SmartShoppingModel.Status_PurchaseOrder">
+              <MappingFragment StoreEntitySet="Status_PurchaseOrder">
+                <ScalarProperty Name="Status_ID狀態編號" ColumnName="Status_ID狀態編號" />
+                <ScalarProperty Name="Status狀態" ColumnName="Status狀態" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="SmartShoppingModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vendors">
+            <EntityTypeMapping TypeName="SmartShoppingModel.Vendors">
+              <MappingFragment StoreEntitySet="Vendors">
+                <ScalarProperty Name="Vendor_ID" ColumnName="Vendor_ID" />
+                <ScalarProperty Name="UnifiedBusinessNumbe" ColumnName="UnifiedBusinessNumbe" />
+                <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+                <ScalarProperty Name="Representative" ColumnName="Representative" />
+                <ScalarProperty Name="VendorPhone" ColumnName="VendorPhone" />
+                <ScalarProperty Name="VendorAddress" ColumnName="VendorAddress" />
+                <ScalarProperty Name="PaymentMethod_ID" ColumnName="PaymentMethod_ID" />
+                <ScalarProperty Name="VendorEmail" ColumnName="VendorEmail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="回購週期">
+            <EntityTypeMapping TypeName="SmartShoppingModel.回購週期">
+              <MappingFragment StoreEntitySet="回購週期">
+                <ScalarProperty Name="Repeat_ID回購週期編號" ColumnName="Repeat_ID回購週期編號" />
+                <ScalarProperty Name="RepeatMonth回購週期_月_" ColumnName="RepeatMonth回購週期(月)" />
+                <ScalarProperty Name="RepeatDay回購週期_天_" ColumnName="RepeatDay回購週期(天)" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="回購週期設定紀錄">
+            <EntityTypeMapping TypeName="SmartShoppingModel.回購週期設定紀錄">
+              <MappingFragment StoreEntitySet="回購週期設定紀錄">
+                <ScalarProperty Name="回_ID" ColumnName="回_ID" />
+                <ScalarProperty Name="List_ID" ColumnName="List_ID" />
+                <ScalarProperty Name="List_ID_Out" ColumnName="List_ID_Out" />
+                <ScalarProperty Name="Repeat_ID回購週期編號" ColumnName="Repeat_ID回購週期編號" />
+                <ScalarProperty Name="SetDate設定日" ColumnName="SetDate設定日" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="商品評論">
+            <EntityTypeMapping TypeName="SmartShoppingModel.商品評論">
+              <MappingFragment StoreEntitySet="商品評論">
+                <ScalarProperty Name="Comment_ID商品評論編號" ColumnName="Comment_ID商品評論編號" />
+                <ScalarProperty Name="Member_ID會員編號" ColumnName="Member_ID會員編號" />
+                <ScalarProperty Name="Product_ID商品編號" ColumnName="Product_ID商品編號" />
+                <ScalarProperty Name="Comment評論" ColumnName="Comment評論" />
+                <ScalarProperty Name="Stars星級" ColumnName="Stars星級" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="設定來源">
+            <EntityTypeMapping TypeName="SmartShoppingModel.設定來源">
+              <MappingFragment StoreEntitySet="設定來源">
+                <ScalarProperty Name="設定來源編號" ColumnName="設定來源編號" />
+                <ScalarProperty Name="設定來源1" ColumnName="設定來源" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Returns">
+            <EntityTypeMapping TypeName="SmartShoppingModel.Returns">
+              <MappingFragment StoreEntitySet="Returns">
+                <ScalarProperty Name="OrderDetail_ID訂單明細編號" ColumnName="OrderDetail_ID訂單明細編號" />
+                <ScalarProperty Name="Refund" ColumnName="Refund" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+                <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+                <ScalarProperty Name="ReturnTime" ColumnName="ReturnTime" />
+                <ScalarProperty Name="Done" ColumnName="Done" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Royalty">
+            <EntityTypeMapping TypeName="SmartShoppingModel.Royalty">
+              <MappingFragment StoreEntitySet="Royalty">
+                <ScalarProperty Name="Member_ID會員編號" ColumnName="Member_ID會員編號" />
+                <ScalarProperty Name="MemberLevel會員等級" ColumnName="MemberLevel會員等級" />
+                <ScalarProperty Name="LoginCount登入次數" ColumnName="LoginCount登入次數" />
+                <ScalarProperty Name="Coin紅利積點" ColumnName="Coin紅利積點" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shipping">
+            <EntityTypeMapping TypeName="SmartShoppingModel.Shipping">
+              <MappingFragment StoreEntitySet="Shipping">
+                <ScalarProperty Name="Order_ID訂單編號" ColumnName="Order_ID訂單編號" />
+                <ScalarProperty Name="ShippingFee運費" ColumnName="ShippingFee運費" />
+                <ScalarProperty Name="ShippingAddress收貨地址" ColumnName="ShippingAddress收貨地址" />
+                <ScalarProperty Name="ShipMethod_ID運貨方式編號" ColumnName="ShipMethod_ID運貨方式編號" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="MemberRole" TypeName="SmartShoppingModel.MemberRole" StoreEntitySet="MemberRole">
+            <EndProperty Name="Roles">
+              <ScalarProperty Name="Roles_ID購物角色編號" ColumnName="Roles_ID購物角色編號" />
+            </EndProperty>
+            <EndProperty Name="Member">
+              <ScalarProperty Name="Member_ID會員編號" ColumnName="Member_ID會員編號" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="PromotionDetail" TypeName="SmartShoppingModel.PromotionDetail" StoreEntitySet="PromotionDetail">
+            <EndProperty Name="Products">
+              <ScalarProperty Name="Product_ID商品編號" ColumnName="Product_ID商品編號" />
+            </EndProperty>
+            <EndProperty Name="promotion">
+              <ScalarProperty Name="Promotion_ID商品促銷編號" ColumnName="Promotion_ID商品促銷編號" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

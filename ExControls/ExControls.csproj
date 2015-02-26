@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E38261BA-A7F0-4162-8FCD-FDDD0BD66C80}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExControls</RootNamespace>
+    <AssemblyName>ExControls</AssemblyName>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>ExControlsSN.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>http://localhost/ExControls/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseEntry.Designer.cs">
+      <DependentUpon>BaseEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboBoxEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComboBoxEntry.Designer.cs">
+      <DependentUpon>ComboBoxEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DateTimePickerEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DateTimePickerEntry.Designer.cs">
+      <DependentUpon>DateTimePickerEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExLabel.Designer.cs">
+      <DependentUpon>ExLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExTextBox.Designer.cs">
+      <DependentUpon>ExTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="LabelEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LabelEntry.Designer.cs">
+      <DependentUpon>LabelEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinkLabelEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LinkLabelEntry.Designer.cs">
+      <DependentUpon>LinkLabelEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListBoxEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListBoxEntry.Designer.cs">
+      <DependentUpon>ListBoxEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaskedEditEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaskedEditEntry.Designer.cs">
+      <DependentUpon>MaskedEditEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonthCalendarEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MonthCalendarEntry.Designer.cs">
+      <DependentUpon>MonthCalendarEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PictureBoxEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PictureBoxEntry.Designer.cs">
+      <DependentUpon>PictureBoxEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RoundCornerPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RoundCornerPanel.Designer.cs">
+      <DependentUpon>RoundCornerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoundRectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoundRectForm.Designer.cs">
+      <DependentUpon>RoundRectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextEntry.Designer.cs">
+      <DependentUpon>TextEntry.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComboBoxEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ComboBoxEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateTimePickerEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DateTimePickerEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExLabel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExTextBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelEntry.resx">
+      <DependentUpon>LabelEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinkLabelEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LinkLabelEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListBoxEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ListBoxEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaskedEditEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaskedEditEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthCalendarEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MonthCalendarEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PictureBoxEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PictureBoxEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoundCornerPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RoundCornerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoundRectForm.resx">
+      <DependentUpon>RoundRectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextEntry.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExControlsSN.snk" />
+    <None Include="MainClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.1.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2005 Express Edition</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

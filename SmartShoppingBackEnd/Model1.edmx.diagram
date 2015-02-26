@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1710da680cb64d3ab109bde4c0885d68" Name="Diagram1">
+        <EntityTypeShape EntityType="SmartShoppingModel.Brands" Width="1.5" PointX="3" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.Categories" Width="1.5" PointX="3" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.InsideShoppingList" Width="1.5" PointX="10.5" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.Member" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.OrderDetail" Width="1.5" PointX="7.5" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.Orders" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.OutsideShoppingList" Width="1.5" PointX="13.5" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.PaymentMethod" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.ProductPicture" Width="1.5" PointX="7.5" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.Products" Width="1.5" PointX="5.25" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.promotion" Width="1.5" PointX="7.5" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.PurchaseOrderDetail進貨明細" Width="1.5" PointX="13.5" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.PurchaseOrder進貨單" Width="1.5" PointX="8.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.Roles" Width="1.5" PointX="1.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.RolesDetail" Width="1.5" PointX="5.25" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.ShipMethod" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.SSBackEndProgram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.SSBackEndUser" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.Status" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.Status_PurchaseOrder" Width="1.5" PointX="11.25" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.sysdiagrams" Width="1.5" PointX="3.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.Vendors" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.回購週期" Width="1.5" PointX="13.5" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.回購週期設定紀錄" Width="1.5" PointX="15.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.商品評論" Width="1.5" PointX="10.5" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.設定來源" Width="1.5" PointX="0.75" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.Returns" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.Royalty" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShoppingModel.Shipping" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <AssociationConnector Association="SmartShoppingModel.FK_Products_Brands" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_Categories_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_Categories_設定來源" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_M_ShoppingList_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_OutsideShoppingList_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_RolesDetail_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_M_ShoppingList_Member" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_M_ShoppingList_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_回購週期設定紀錄_InsideShoppingList" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_Orders_Member" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_OutsideShoppingList_Member" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_Royalty_Member" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_商品評論_Member" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_OrderDetail_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_OrderDetail_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_OrderDetail_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_Returns_OrderDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_Orders_PaymentMethod" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_Shipping_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_回購週期設定紀錄_OutsideShoppingList" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_Vendors_PaymentMethod" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_ProductPicture_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_Products_Vendors" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_PurchaseOrderDetail進貨明細_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_商品評論_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_PurchaseOrderDetail進貨明細_PurchaseOrder進貨單" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_PurchaseOrderDetail進貨明細_Status_PurchaseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_PurchaseOrder進貨單_ShipMethod" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_PurchaseOrder進貨單_Vendors" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_RolesDetail_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_Shipping_ShipMethod" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.FK_回購週期設定紀錄_回購週期" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.MemberRole" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShoppingModel.PromotionDetail" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
