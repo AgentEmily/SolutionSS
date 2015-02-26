@@ -53,7 +53,7 @@ namespace SmartShoppingBackEnd
             setReadOnly();
         }
 
-        private void frmMembersCRUD_Load(object sender, EventArgs e)//FormLoad事件-讀資料
+        private void frmProductsCRUD_Load(object sender, EventArgs e)//FormLoad事件-讀資料
         {
             ResetProductsData();
 
@@ -139,20 +139,13 @@ namespace SmartShoppingBackEnd
 
         public override void btnSearch_Click(object sender, EventArgs e)
         {
-            if (tbxSearch.Text == null)
-            {
-                ResetProductsData();
-            }
-            else
-            {
                 frmProductsSearch Sform = new frmProductsSearch();
                 Sform.SearchTextBox.Text = this.tbxSearch.Text;
-                if (Sform.ShowDialog() == DialogResult.OK &&Sform.Product_ID!=0)
+                if (Sform.ShowDialog() == DialogResult.OK && Sform.Product_ID != 0)
                 {
                     int Index = Sform.Product_ID;//從Sform取值設定到this
                     this.ProductsBindingSource.Position = Index;
                 }
-            }
         }
 
         private void exLabel1_Click(object sender, EventArgs e)
@@ -163,10 +156,7 @@ namespace SmartShoppingBackEnd
             this.stockTextBox.Text = "230";
             this.discontinuedCheckBox.CheckState = CheckState.Checked;
 
-
             this.descriptionTextBox.Text = "食用如有不適請即刻停止食用並請教醫師。正在服用抗膽固醇藥物者，請先醫師後再服用。 ";
-
-            
         }
     }
 }

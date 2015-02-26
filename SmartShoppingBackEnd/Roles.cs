@@ -17,11 +17,13 @@ namespace SmartShoppingBackEnd
         public Roles()
         {
             this.RolesDetail = new HashSet<RolesDetail>();
+            this.Members = new HashSet<Members>();
         }
     
         public int Roles_ID { get; set; }
         public string RolesName { get; set; }
     
         public virtual ICollection<RolesDetail> RolesDetail { get; set; }
+        public virtual ICollection<Members> Members { get; set; }
     }
 }

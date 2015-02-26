@@ -613,7 +613,7 @@
             this.MinimizeBox = false;
             this.Name = "frmProductsCRUD";
             this.Text = "商品基本資料維護";
-            this.Load += new System.EventHandler(this.frmMembersCRUD_Load);
+            this.Load += new System.EventHandler(this.frmProductsCRUD_Load);
             this.Controls.SetChildIndex(this.splitContainer1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ProductsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CategoriesBindingSource)).EndInit();

@@ -15,11 +15,9 @@ namespace SmartShoppingBackEnd
     public partial class SSAuthority
     {
         public string Employee_ID { get; set; }
-        public string Program_ID { get; set; }
-        public string Run { get; set; }
-        public string Append { get; set; }
-        public string Edit { get; set; }
-        public string Report { get; set; }
+        public int Program_ID { get; set; }
+        public bool Run { get; set; }
+        public bool Edit { get; set; }
     
         public virtual SSPrograms SSPrograms { get; set; }
         public virtual SSUsers SSUsers { get; set; }

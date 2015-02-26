@@ -1,6 +1,6 @@
 ﻿namespace SmartShoppingBackEnd
 {
-    partial class FrmStartup
+    partial class frmStartup
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStartup));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStartup));
             this.label5 = new System.Windows.Forms.Label();
             this.roundCornerPanel2 = new ExControls.RoundCornerPanel(this.components);
             this.pictureBoxEntry3 = new ExControls.PictureBoxEntry();
@@ -212,7 +212,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEntry1.LabelControl.Location = new System.Drawing.Point(17, 6);
             this.labelEntry1.LabelControl.Name = "entryLabel";
-            this.labelEntry1.LabelControl.Size = new System.Drawing.Size(921, 67);
+            this.labelEntry1.LabelControl.Size = new System.Drawing.Size(921, 88);
             this.labelEntry1.LabelControl.TabIndex = 0;
             this.labelEntry1.Location = new System.Drawing.Point(0, 0);
             this.labelEntry1.Margin = new System.Windows.Forms.Padding(30);
@@ -251,7 +251,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEntry2.LabelControl.Location = new System.Drawing.Point(17, 6);
             this.labelEntry2.LabelControl.Name = "entryLabel";
-            this.labelEntry2.LabelControl.Size = new System.Drawing.Size(921, 72);
+            this.labelEntry2.LabelControl.Size = new System.Drawing.Size(921, 91);
             this.labelEntry2.LabelControl.TabIndex = 0;
             this.labelEntry2.LabelControl.Text = "entryLabel";
             this.labelEntry2.Location = new System.Drawing.Point(0, 106);
@@ -290,7 +290,7 @@
             this.Controls.Add(this.roundCornerPanel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
-            this.Name = "FrmStartup";
+            this.Name = "frmStartup";
             this.Text = "首頁";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmStartup_Load);

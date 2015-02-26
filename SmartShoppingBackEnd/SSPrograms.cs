@@ -19,7 +19,7 @@ namespace SmartShoppingBackEnd
             this.SSAuthority = new HashSet<SSAuthority>();
         }
     
-        public string Program_ID { get; set; }
+        public int Program_ID { get; set; }
         public string ProgramName { get; set; }
     
         public virtual ICollection<SSAuthority> SSAuthority { get; set; }

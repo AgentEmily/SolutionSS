@@ -28,8 +28,8 @@ namespace SmartShoppingBackEnd
         public string Description { get; set; }
     
         public virtual Categories Categories { get; set; }
+        public virtual Members Members { get; set; }
         public virtual Products Products { get; set; }
         public virtual ICollection<RepurchaseCycle> RepurchaseCycle { get; set; }
-        public virtual Members Members { get; set; }
     }
 }

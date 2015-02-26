@@ -25,17 +25,21 @@ namespace SmartShoppingBackEnd
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<SSPrograms> SSPrograms { get; set; }
-        public virtual DbSet<SSUsers> SSUsers { get; set; }
-        public virtual DbSet<SSAuthority> SSAuthority { get; set; }
-        public virtual DbSet<InsideEmailList> InsideEmailList { get; set; }
-        public virtual DbSet<InsideShoppingList> InsideShoppingList { get; set; }
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<AdSlider> AdSlider { get; set; }
         public virtual DbSet<AdTicker> AdTicker { get; set; }
+        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
+        public virtual DbSet<AutoMail> AutoMail { get; set; }
         public virtual DbSet<Brands> Brands { get; set; }
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<CoinGift> CoinGift { get; set; }
         public virtual DbSet<Comment> Comment { get; set; }
+        public virtual DbSet<InsideEmailList> InsideEmailList { get; set; }
+        public virtual DbSet<InsideShoppingList> InsideShoppingList { get; set; }
+        public virtual DbSet<Members> Members { get; set; }
         public virtual DbSet<OrderDetail> OrderDetail { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<Outside> Outside { get; set; }
@@ -46,6 +50,8 @@ namespace SmartShoppingBackEnd
         public virtual DbSet<Promotions> Promotions { get; set; }
         public virtual DbSet<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
         public virtual DbSet<PurchaseOrders> PurchaseOrders { get; set; }
+        public virtual DbSet<Recommendation> Recommendation { get; set; }
+        public virtual DbSet<RecommendationChart> RecommendationChart { get; set; }
         public virtual DbSet<Repeat> Repeat { get; set; }
         public virtual DbSet<RepurchaseCycle> RepurchaseCycle { get; set; }
         public virtual DbSet<Returns> Returns { get; set; }
@@ -54,11 +60,10 @@ namespace SmartShoppingBackEnd
         public virtual DbSet<Royalty> Royalty { get; set; }
         public virtual DbSet<ShipMethod> ShipMethod { get; set; }
         public virtual DbSet<Source> Source { get; set; }
+        public virtual DbSet<SSAuthority> SSAuthority { get; set; }
+        public virtual DbSet<SSPrograms> SSPrograms { get; set; }
+        public virtual DbSet<SSUsers> SSUsers { get; set; }
         public virtual DbSet<Status> Status { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Vendors> Vendors { get; set; }
-        public virtual DbSet<Recommendation> Recommendation { get; set; }
-        public virtual DbSet<RecommendationChart> RecommendationChart { get; set; }
-        public virtual DbSet<Members> Members { get; set; }
     }
 }

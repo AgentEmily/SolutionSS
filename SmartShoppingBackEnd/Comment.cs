@@ -20,7 +20,7 @@ namespace SmartShoppingBackEnd
         public string Comment1 { get; set; }
         public int Stars { get; set; }
     
-        public virtual Products Products { get; set; }
         public virtual Members Members { get; set; }
+        public virtual Products Products { get; set; }
     }
 }

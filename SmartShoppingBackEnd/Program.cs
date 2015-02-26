@@ -16,7 +16,7 @@ namespace SmartShoppingBackEnd
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAutoMail());
+            Application.Run(new frmMain());
         }
     }
 }

@@ -59,3 +59,16 @@ K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\WpfControlLibrary2\ob
 K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.csproj.GenerateResource.Cache
 K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.dll
 K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.pdb
+C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\bin\Debug\WpfControlLibrary2.dll
+C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\bin\Debug\WpfControlLibrary2.pdb
+C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.csprojResolveAssemblyReference.cache
+C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\UserControl1.baml
+C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\UserControl_Mirror.baml
+C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\UserControl1.g.cs
+C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\UserControl_Mirror.g.cs
+C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2_MarkupCompile.cache
+C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.g.resources
+C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.Properties.Resources.resources
+C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.csproj.GenerateResource.Cache
+C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.dll
+C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.pdb

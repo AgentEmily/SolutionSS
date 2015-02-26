@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SmartShoppingBackEnd
 {
-    public partial class FrmStartup : Form
+    public partial class frmStartup : Form
     {
-        public FrmStartup()
+        public frmStartup()
         {
             InitializeComponent();
         }

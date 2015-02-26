@@ -32,8 +32,8 @@ namespace SmartShoppingBackEnd
         public bool Active { get; set; }
     
         public virtual Categories Categories { get; set; }
+        public virtual Members Members { get; set; }
         public virtual ICollection<Outside> Outside { get; set; }
         public virtual ICollection<RepurchaseCycle> RepurchaseCycle { get; set; }
-        public virtual Members Members { get; set; }
     }
 }

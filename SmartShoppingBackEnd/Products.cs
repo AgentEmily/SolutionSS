@@ -21,8 +21,8 @@ namespace SmartShoppingBackEnd
             this.OrderDetail = new HashSet<OrderDetail>();
             this.ProductPictures = new HashSet<ProductPictures>();
             this.PurchaseOrderDetail = new HashSet<PurchaseOrderDetail>();
-            this.Promotions = new HashSet<Promotions>();
             this.RecommendationChart = new HashSet<RecommendationChart>();
+            this.Promotions = new HashSet<Promotions>();
         }
     
         public int Product_ID { get; set; }
@@ -48,8 +48,8 @@ namespace SmartShoppingBackEnd
         public virtual ICollection<OrderDetail> OrderDetail { get; set; }
         public virtual ICollection<ProductPictures> ProductPictures { get; set; }
         public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
-        public virtual ICollection<Promotions> Promotions { get; set; }
         public virtual Recommendation Recommendation { get; set; }
         public virtual ICollection<RecommendationChart> RecommendationChart { get; set; }
+        public virtual ICollection<Promotions> Promotions { get; set; }
     }
 }

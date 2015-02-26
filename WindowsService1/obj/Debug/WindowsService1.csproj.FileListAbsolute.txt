@@ -48,3 +48,17 @@ K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\WindowsService1\obj\D
 K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\WindowsService1\obj\Debug\WindowsService1.csproj.GenerateResource.Cache
 K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\WindowsService1\obj\Debug\WindowsService1.exe
 K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\WindowsService1\obj\Debug\WindowsService1.pdb
+C:\Users\III\Desktop\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe.config
+C:\Users\III\Desktop\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+C:\Users\III\Desktop\SolutionSS\WindowsService1\bin\Debug\WindowsService1.pdb
+C:\Users\III\Desktop\SolutionSS\WindowsService1\bin\Debug\EntityFramework.dll
+C:\Users\III\Desktop\SolutionSS\WindowsService1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\III\Desktop\SolutionSS\WindowsService1\bin\Debug\EntityFramework.xml
+C:\Users\III\Desktop\SolutionSS\WindowsService1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\III\Desktop\SolutionSS\WindowsService1\bin\Debug\zh-Hant\EntityFramework.resources.dll
+C:\Users\III\Desktop\SolutionSS\WindowsService1\obj\Debug\WindowsService1.csprojResolveAssemblyReference.cache
+C:\Users\III\Desktop\SolutionSS\WindowsService1\obj\Debug\WindowsService1.ProjectInstaller.resources
+C:\Users\III\Desktop\SolutionSS\WindowsService1\obj\Debug\SmartShoppingBackEnd.ServiceAutoMailing.resources
+C:\Users\III\Desktop\SolutionSS\WindowsService1\obj\Debug\WindowsService1.csproj.GenerateResource.Cache
+C:\Users\III\Desktop\SolutionSS\WindowsService1\obj\Debug\WindowsService1.exe
+C:\Users\III\Desktop\SolutionSS\WindowsService1\obj\Debug\WindowsService1.pdb

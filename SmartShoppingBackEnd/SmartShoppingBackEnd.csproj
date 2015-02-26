@@ -89,6 +89,21 @@
     <Compile Include="AdTicker.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="AspNetRoles.cs">
+      <DependentUpon>SSBackEndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaims.cs">
+      <DependentUpon>SSBackEndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogins.cs">
+      <DependentUpon>SSBackEndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUsers.cs">
+      <DependentUpon>SSBackEndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoMail.cs">
+      <DependentUpon>SSBackEndModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="BaseDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,19 +122,10 @@
     <Compile Include="Comment.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>SSBackEndModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EveryBodyUse.cs" />
-    <Compile Include="fmSplashScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fmSplashScreen.Designer.cs">
-      <DependentUpon>fmSplashScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,12 @@
     </Compile>
     <Compile Include="frmBase.Designer.cs">
       <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseDialog.Designer.cs">
+      <DependentUpon>frmBaseDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBaseSearch.cs">
       <SubType>Form</SubType>
@@ -156,11 +168,11 @@
     <Compile Include="frmLogin.designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain2.cs">
+    <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain2.Designer.cs">
-      <DependentUpon>frmMain2.cs</DependentUpon>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMembersCRUD.cs">
       <SubType>Form</SubType>
@@ -192,12 +204,6 @@
     <Compile Include="frmPictureLoad.designer.cs">
       <DependentUpon>frmPictureLoad.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProducts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmProducts.Designer.cs">
-      <DependentUpon>frmProducts.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmProductsCRUD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,12 +215,6 @@
     </Compile>
     <Compile Include="frmProductsSearch.designer.cs">
       <DependentUpon>frmProductsSearch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmPromotion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmPromotion.Designer.cs">
-      <DependentUpon>FrmPromotion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPurchaseOrder.cs">
       <SubType>Form</SubType>
@@ -228,6 +228,12 @@
     <Compile Include="frmPurchaseOrderQuery.Designer.cs">
       <DependentUpon>frmPurchaseOrderQuery.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPurchaseOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPurchaseOrders.Designer.cs">
+      <DependentUpon>frmPurchaseOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRelateProducts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,17 +246,23 @@
     <Compile Include="frmRoles.Designer.cs">
       <DependentUpon>frmRoles.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplashScreen.Designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStartup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmStartup.Designer.cs">
       <DependentUpon>FrmStartup.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTest.cs">
+    <Compile Include="frmUserPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTest.Designer.cs">
-      <DependentUpon>frmTest.cs</DependentUpon>
+    <Compile Include="frmUserPassword.Designer.cs">
+      <DependentUpon>frmUserPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="frmVendorsCRUD.cs">
       <SubType>Form</SubType>
@@ -263,12 +275,6 @@
     </Compile>
     <Compile Include="frmVendorsSearch.Designer.cs">
       <DependentUpon>frmVendorsSearch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmwhy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmwhy.Designer.cs">
-      <DependentUpon>frmwhy.cs</DependentUpon>
     </Compile>
     <Compile Include="InsideEmailList.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
@@ -388,20 +394,11 @@
     <Compile Include="Status.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>SSBackEndModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Vendors.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BaseDialog.resx">
       <DependentUpon>BaseDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fmSplashScreen.resx">
-      <DependentUpon>fmSplashScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAboutBox.resx">
       <DependentUpon>frmAboutBox.cs</DependentUpon>
@@ -412,6 +409,9 @@
     <EmbeddedResource Include="frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseDialog.resx">
+      <DependentUpon>frmBaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBaseSearch.resx">
       <DependentUpon>frmBaseSearch.cs</DependentUpon>
     </EmbeddedResource>
@@ -421,8 +421,8 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain2.resx">
-      <DependentUpon>frmMain2.cs</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMembersCRUD.resx">
       <DependentUpon>frmMembersCRUD.cs</DependentUpon>
@@ -439,17 +439,11 @@
     <EmbeddedResource Include="frmPictureLoad.resx">
       <DependentUpon>frmPictureLoad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProducts.resx">
-      <DependentUpon>frmProducts.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmProductsCRUD.resx">
       <DependentUpon>frmProductsCRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductsSearch.resx">
       <DependentUpon>frmProductsSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmPromotion.resx">
-      <DependentUpon>FrmPromotion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPurchaseOrder.resx">
       <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
@@ -457,26 +451,29 @@
     <EmbeddedResource Include="frmPurchaseOrderQuery.resx">
       <DependentUpon>frmPurchaseOrderQuery.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPurchaseOrders.resx">
+      <DependentUpon>frmPurchaseOrders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRelateProducts.resx">
       <DependentUpon>frmRelateProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRoles.resx">
       <DependentUpon>frmRoles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmStartup.resx">
       <DependentUpon>FrmStartup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTest.resx">
-      <DependentUpon>frmTest.cs</DependentUpon>
+    <EmbeddedResource Include="frmUserPassword.resx">
+      <DependentUpon>frmUserPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVendorsCRUD.resx">
       <DependentUpon>frmVendorsCRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVendorsSearch.resx">
       <DependentUpon>frmVendorsSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmwhy.resx">
-      <DependentUpon>frmwhy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProjectInstaller.resx">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>

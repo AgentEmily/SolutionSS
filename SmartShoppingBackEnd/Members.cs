@@ -19,6 +19,7 @@ namespace SmartShoppingBackEnd
             this.Comment1 = new HashSet<Comment>();
             this.InsideShoppingList = new HashSet<InsideShoppingList>();
             this.OutsideShoppingList = new HashSet<OutsideShoppingList>();
+            this.Roles = new HashSet<Roles>();
         }
     
         public int Member_ID { get; set; }
@@ -43,5 +44,6 @@ namespace SmartShoppingBackEnd
         public virtual ICollection<InsideShoppingList> InsideShoppingList { get; set; }
         public virtual ICollection<OutsideShoppingList> OutsideShoppingList { get; set; }
         public virtual Royalty Royalty { get; set; }
+        public virtual ICollection<Roles> Roles { get; set; }
     }
 }

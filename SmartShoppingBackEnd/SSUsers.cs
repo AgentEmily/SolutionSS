@@ -20,7 +20,7 @@ namespace SmartShoppingBackEnd
         }
     
         public string Employee_ID { get; set; }
-        public string EmployaaName { get; set; }
+        public string EmployeeName { get; set; }
         public string Password { get; set; }
     
         public virtual ICollection<SSAuthority> SSAuthority { get; set; }

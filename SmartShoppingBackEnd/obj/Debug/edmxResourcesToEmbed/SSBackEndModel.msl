@@ -1,60 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="SmartShoppingModelStoreContainer" CdmEntityContainer="SmartShoppingEntities">
-    <EntitySetMapping Name="SSPrograms">
-      <EntityTypeMapping TypeName="SmartShoppingModel.SSPrograms">
-        <MappingFragment StoreEntitySet="SSPrograms">
-          <ScalarProperty Name="Program_ID" ColumnName="Program_ID" />
-          <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="SSUsers">
-      <EntityTypeMapping TypeName="SmartShoppingModel.SSUsers">
-        <MappingFragment StoreEntitySet="SSUsers">
-          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
-          <ScalarProperty Name="EmployaaName" ColumnName="EmployaaName" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="SSAuthority">
-      <EntityTypeMapping TypeName="SmartShoppingModel.SSAuthority">
-        <MappingFragment StoreEntitySet="SSAuthority">
-          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
-          <ScalarProperty Name="Program_ID" ColumnName="Program_ID" />
-          <ScalarProperty Name="Run" ColumnName="Run" />
-          <ScalarProperty Name="Append" ColumnName="Append" />
-          <ScalarProperty Name="Edit" ColumnName="Edit" />
-          <ScalarProperty Name="Report" ColumnName="Report" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="InsideEmailList">
-      <EntityTypeMapping TypeName="SmartShoppingModel.InsideEmailList">
-        <MappingFragment StoreEntitySet="InsideEmailList">
-          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
-          <ScalarProperty Name="Sent" ColumnName="Sent" />
-          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
-          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="MemberName" ColumnName="MemberName" />
-          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
-          <ScalarProperty Name="List_ID" ColumnName="List_ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="InsideShoppingList">
-      <EntityTypeMapping TypeName="SmartShoppingModel.InsideShoppingList">
-        <MappingFragment StoreEntitySet="InsideShoppingList">
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-          <ScalarProperty Name="NextDate" ColumnName="NextDate" />
-          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
-          <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
-          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
-          <ScalarProperty Name="List_ID" ColumnName="List_ID" />
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="SmartShoppingModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -73,6 +26,60 @@
       <EntityTypeMapping TypeName="SmartShoppingModel.AdTicker">
         <MappingFragment StoreEntitySet="AdTicker">
           <ScalarProperty Name="TagLine" ColumnName="TagLine" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="SmartShoppingModel.AspNetRoles">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="SmartShoppingModel.AspNetUserClaims">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="SmartShoppingModel.AspNetUserLogins">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="SmartShoppingModel.AspNetUsers">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoMail">
+      <EntityTypeMapping TypeName="SmartShoppingModel.AutoMail">
+        <MappingFragment StoreEntitySet="AutoMail">
+          <ScalarProperty Name="ProductString" ColumnName="ProductString" />
+          <ScalarProperty Name="AdString" ColumnName="AdString" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -113,6 +120,57 @@
           <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
           <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
           <ScalarProperty Name="Comment_ID" ColumnName="Comment_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsideEmailList">
+      <EntityTypeMapping TypeName="SmartShoppingModel.InsideEmailList">
+        <MappingFragment StoreEntitySet="InsideEmailList">
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Sent" ColumnName="Sent" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MemberName" ColumnName="MemberName" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="List_ID" ColumnName="List_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsideShoppingList">
+      <EntityTypeMapping TypeName="SmartShoppingModel.InsideShoppingList">
+        <MappingFragment StoreEntitySet="InsideShoppingList">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="NextDate" ColumnName="NextDate" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="List_ID" ColumnName="List_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="SmartShoppingModel.Members">
+        <MappingFragment StoreEntitySet="Members">
+          <ScalarProperty Name="AdOK" ColumnName="AdOK" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="LastDeliveryDate" ColumnName="LastDeliveryDate" />
+          <ScalarProperty Name="M_Picture" ColumnName="M_Picture" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="TelPhone" ColumnName="TelPhone" />
+          <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+          <ScalarProperty Name="Birthyear" ColumnName="Birthyear" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="MemberName" ColumnName="MemberName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -252,6 +310,48 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Recommendation">
+      <EntityTypeMapping TypeName="SmartShoppingModel.Recommendation">
+        <MappingFragment StoreEntitySet="Recommendation">
+          <ScalarProperty Name="P24" ColumnName="P24" />
+          <ScalarProperty Name="P23" ColumnName="P23" />
+          <ScalarProperty Name="P22" ColumnName="P22" />
+          <ScalarProperty Name="P21" ColumnName="P21" />
+          <ScalarProperty Name="P20" ColumnName="P20" />
+          <ScalarProperty Name="P19" ColumnName="P19" />
+          <ScalarProperty Name="P18" ColumnName="P18" />
+          <ScalarProperty Name="P17" ColumnName="P17" />
+          <ScalarProperty Name="P16" ColumnName="P16" />
+          <ScalarProperty Name="P15" ColumnName="P15" />
+          <ScalarProperty Name="P14" ColumnName="P14" />
+          <ScalarProperty Name="P13" ColumnName="P13" />
+          <ScalarProperty Name="P12" ColumnName="P12" />
+          <ScalarProperty Name="P11" ColumnName="P11" />
+          <ScalarProperty Name="P10" ColumnName="P10" />
+          <ScalarProperty Name="P9" ColumnName="P9" />
+          <ScalarProperty Name="P8" ColumnName="P8" />
+          <ScalarProperty Name="P7" ColumnName="P7" />
+          <ScalarProperty Name="P6" ColumnName="P6" />
+          <ScalarProperty Name="P5" ColumnName="P5" />
+          <ScalarProperty Name="P4" ColumnName="P4" />
+          <ScalarProperty Name="P3" ColumnName="P3" />
+          <ScalarProperty Name="P2" ColumnName="P2" />
+          <ScalarProperty Name="P1" ColumnName="P1" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecommendationChart">
+      <EntityTypeMapping TypeName="SmartShoppingModel.RecommendationChart">
+        <MappingFragment StoreEntitySet="RecommendationChart">
+          <ScalarProperty Name="NOName" ColumnName="NOName" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="NO" ColumnName="NO" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="ListID" ColumnName="ListID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Repeat">
       <EntityTypeMapping TypeName="SmartShoppingModel.Repeat">
         <MappingFragment StoreEntitySet="Repeat">
@@ -327,22 +427,38 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="SSAuthority">
+      <EntityTypeMapping TypeName="SmartShoppingModel.SSAuthority">
+        <MappingFragment StoreEntitySet="SSAuthority">
+          <ScalarProperty Name="Edit" ColumnName="Edit" />
+          <ScalarProperty Name="Run" ColumnName="Run" />
+          <ScalarProperty Name="Program_ID" ColumnName="Program_ID" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSPrograms">
+      <EntityTypeMapping TypeName="SmartShoppingModel.SSPrograms">
+        <MappingFragment StoreEntitySet="SSPrograms">
+          <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+          <ScalarProperty Name="Program_ID" ColumnName="Program_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSUsers">
+      <EntityTypeMapping TypeName="SmartShoppingModel.SSUsers">
+        <MappingFragment StoreEntitySet="SSUsers">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Status">
       <EntityTypeMapping TypeName="SmartShoppingModel.Status">
         <MappingFragment StoreEntitySet="Status">
           <ScalarProperty Name="Status1" ColumnName="Status" />
           <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="SmartShoppingModel.sysdiagrams">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="definition" ColumnName="definition" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="name" ColumnName="name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -364,6 +480,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="SmartShoppingModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MemberRole" TypeName="SmartShoppingModel.MemberRole" StoreEntitySet="MemberRole">
+      <EndProperty Name="Roles">
+        <ScalarProperty Name="Roles_ID" ColumnName="Roles_ID" />
+      </EndProperty>
+      <EndProperty Name="Members">
+        <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
     <AssociationSetMapping Name="PromotionDetail" TypeName="SmartShoppingModel.PromotionDetail" StoreEntitySet="PromotionDetail">
       <EndProperty Name="Promotions">
         <ScalarProperty Name="Promotion_ID" ColumnName="Promotion_ID" />
@@ -372,70 +504,5 @@
         <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
       </EndProperty>
     </AssociationSetMapping>
-    <EntitySetMapping Name="Recommendation">
-      <EntityTypeMapping TypeName="SmartShoppingModel.Recommendation">
-        <MappingFragment StoreEntitySet="Recommendation">
-          <ScalarProperty Name="P24" ColumnName="P24" />
-          <ScalarProperty Name="P23" ColumnName="P23" />
-          <ScalarProperty Name="P22" ColumnName="P22" />
-          <ScalarProperty Name="P21" ColumnName="P21" />
-          <ScalarProperty Name="P20" ColumnName="P20" />
-          <ScalarProperty Name="P19" ColumnName="P19" />
-          <ScalarProperty Name="P18" ColumnName="P18" />
-          <ScalarProperty Name="P17" ColumnName="P17" />
-          <ScalarProperty Name="P16" ColumnName="P16" />
-          <ScalarProperty Name="P15" ColumnName="P15" />
-          <ScalarProperty Name="P14" ColumnName="P14" />
-          <ScalarProperty Name="P13" ColumnName="P13" />
-          <ScalarProperty Name="P12" ColumnName="P12" />
-          <ScalarProperty Name="P11" ColumnName="P11" />
-          <ScalarProperty Name="P10" ColumnName="P10" />
-          <ScalarProperty Name="P9" ColumnName="P9" />
-          <ScalarProperty Name="P8" ColumnName="P8" />
-          <ScalarProperty Name="P7" ColumnName="P7" />
-          <ScalarProperty Name="P6" ColumnName="P6" />
-          <ScalarProperty Name="P5" ColumnName="P5" />
-          <ScalarProperty Name="P4" ColumnName="P4" />
-          <ScalarProperty Name="P3" ColumnName="P3" />
-          <ScalarProperty Name="P2" ColumnName="P2" />
-          <ScalarProperty Name="P1" ColumnName="P1" />
-          <ScalarProperty Name="PID" ColumnName="PID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="RecommendationChart">
-      <EntityTypeMapping TypeName="SmartShoppingModel.RecommendationChart">
-        <MappingFragment StoreEntitySet="RecommendationChart">
-          <ScalarProperty Name="NOName" ColumnName="NOName" />
-          <ScalarProperty Name="Score" ColumnName="Score" />
-          <ScalarProperty Name="NO" ColumnName="NO" />
-          <ScalarProperty Name="PID" ColumnName="PID" />
-          <ScalarProperty Name="ListID" ColumnName="ListID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Members">
-      <EntityTypeMapping TypeName="SmartShoppingModel.Members">
-        <MappingFragment StoreEntitySet="Members">
-          <ScalarProperty Name="AdOK" ColumnName="AdOK" />
-          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-          <ScalarProperty Name="Comment" ColumnName="Comment" />
-          <ScalarProperty Name="LastDeliveryDate" ColumnName="LastDeliveryDate" />
-          <ScalarProperty Name="M_Picture" ColumnName="M_Picture" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
-          <ScalarProperty Name="Address" ColumnName="Address" />
-          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
-          <ScalarProperty Name="TelPhone" ColumnName="TelPhone" />
-          <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
-          <ScalarProperty Name="Birthyear" ColumnName="Birthyear" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Username" ColumnName="Username" />
-          <ScalarProperty Name="MemberName" ColumnName="MemberName" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

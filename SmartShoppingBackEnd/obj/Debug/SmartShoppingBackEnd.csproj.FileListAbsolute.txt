@@ -292,8 +292,6 @@ C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\bin\Debug\EntityFramework.x
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.csprojResolveAssemblyReference.cache
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.BaseDialog.resources
-C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.fmSplashScreen.resources
-C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.Form1.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmAboutBox.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmAutoMail.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmBase.resources
@@ -306,7 +304,6 @@ C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBack
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmOrders.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmOrdersQuery.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmPictureLoad.resources
-C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmProducts.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmProductsCRUD.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmProductsSearch.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmPurchaseOrder.resources
@@ -314,10 +311,8 @@ C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBack
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmRelateProducts.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmRoles.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.FrmStartup.resources
-C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmTest.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmVendorsCRUD.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmVendorsSearch.resources
-C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmwhy.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.ProjectInstaller.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.Properties.Resources.resources
 C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.csproj.GenerateResource.Cache
@@ -383,3 +378,8 @@ K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\SmartShoppingBackEnd\
 K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\SmartShoppingBackEnd\obj\Debug\RdlCompile.cache
 K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\SmartShoppingBackEnd\obj\Debug\RdlCompile.compiled
 K:\Project_For_Real\SmartShoppingBackEnd\SSBing\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.FrmPromotion.resources
+C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\bin\Debug\KOTAPI.dll
+C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmBaseDialog.resources
+C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmPurchaseOrders.resources
+C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmSplashScreen.resources
+C:\Users\III\Desktop\SolutionSS\SmartShoppingBackEnd\obj\Debug\SmartShoppingBackEnd.frmUserPassword.resources
