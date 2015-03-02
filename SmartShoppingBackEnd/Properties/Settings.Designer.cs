@@ -54,5 +54,17 @@ namespace SmartShoppingBackEnd.Properties {
                 this["MessageTime"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool cart {
+            get {
+                return ((bool)(this["cart"]));
+            }
+            set {
+                this["cart"] = value;
+            }
+        }
     }
 }

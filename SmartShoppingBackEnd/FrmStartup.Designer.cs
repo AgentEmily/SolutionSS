@@ -95,7 +95,7 @@
             this.pictureBoxEntry3.PictureBoxControl.Margin = new System.Windows.Forms.Padding(10);
             this.pictureBoxEntry3.PictureBoxControl.Name = "entryPictureBox";
             this.pictureBoxEntry3.PictureBoxControl.Padding = new System.Windows.Forms.Padding(10);
-            this.pictureBoxEntry3.PictureBoxControl.Size = new System.Drawing.Size(185, 275);
+            this.pictureBoxEntry3.PictureBoxControl.Size = new System.Drawing.Size(217, 282);
             this.pictureBoxEntry3.PictureBoxControl.TabIndex = 0;
             this.pictureBoxEntry3.PictureBoxControl.TabStop = false;
             this.pictureBoxEntry3.Size = new System.Drawing.Size(233, 326);
@@ -135,7 +135,7 @@
             this.pictureBoxEntry2.PictureBoxControl.Margin = new System.Windows.Forms.Padding(10);
             this.pictureBoxEntry2.PictureBoxControl.Name = "entryPictureBox";
             this.pictureBoxEntry2.PictureBoxControl.Padding = new System.Windows.Forms.Padding(10);
-            this.pictureBoxEntry2.PictureBoxControl.Size = new System.Drawing.Size(190, 275);
+            this.pictureBoxEntry2.PictureBoxControl.Size = new System.Drawing.Size(222, 282);
             this.pictureBoxEntry2.PictureBoxControl.TabIndex = 0;
             this.pictureBoxEntry2.PictureBoxControl.TabStop = false;
             this.pictureBoxEntry2.Size = new System.Drawing.Size(238, 326);
@@ -175,7 +175,7 @@
             this.pictureBoxEntry1.PictureBoxControl.Margin = new System.Windows.Forms.Padding(10);
             this.pictureBoxEntry1.PictureBoxControl.Name = "entryPictureBox";
             this.pictureBoxEntry1.PictureBoxControl.Padding = new System.Windows.Forms.Padding(10);
-            this.pictureBoxEntry1.PictureBoxControl.Size = new System.Drawing.Size(200, 275);
+            this.pictureBoxEntry1.PictureBoxControl.Size = new System.Drawing.Size(232, 282);
             this.pictureBoxEntry1.PictureBoxControl.TabIndex = 0;
             this.pictureBoxEntry1.PictureBoxControl.TabStop = false;
             this.pictureBoxEntry1.Size = new System.Drawing.Size(248, 326);
@@ -210,9 +210,9 @@
             this.labelEntry1.LabelControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEntry1.LabelControl.Location = new System.Drawing.Point(17, 6);
+            this.labelEntry1.LabelControl.Location = new System.Drawing.Point(13, 5);
             this.labelEntry1.LabelControl.Name = "entryLabel";
-            this.labelEntry1.LabelControl.Size = new System.Drawing.Size(921, 88);
+            this.labelEntry1.LabelControl.Size = new System.Drawing.Size(934, 70);
             this.labelEntry1.LabelControl.TabIndex = 0;
             this.labelEntry1.Location = new System.Drawing.Point(0, 0);
             this.labelEntry1.Margin = new System.Windows.Forms.Padding(30);
@@ -249,9 +249,9 @@
             this.labelEntry2.LabelControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEntry2.LabelControl.Location = new System.Drawing.Point(17, 6);
+            this.labelEntry2.LabelControl.Location = new System.Drawing.Point(13, 5);
             this.labelEntry2.LabelControl.Name = "entryLabel";
-            this.labelEntry2.LabelControl.Size = new System.Drawing.Size(921, 91);
+            this.labelEntry2.LabelControl.Size = new System.Drawing.Size(934, 75);
             this.labelEntry2.LabelControl.TabIndex = 0;
             this.labelEntry2.LabelControl.Text = "entryLabel";
             this.labelEntry2.Location = new System.Drawing.Point(0, 106);
@@ -282,7 +282,7 @@
             this.panel1.Size = new System.Drawing.Size(1094, 197);
             this.panel1.TabIndex = 29;
             // 
-            // FrmStartup
+            // frmStartup
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
@@ -290,6 +290,7 @@
             this.Controls.Add(this.roundCornerPanel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmStartup";
             this.Text = "首頁";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

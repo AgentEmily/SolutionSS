@@ -72,3 +72,4 @@ C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.
 C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.csproj.GenerateResource.Cache
 C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.dll
 C:\Users\III\Desktop\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.pdb
+C:\Users\emily_1413\Desktop\Backend\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.csprojResolveAssemblyReference.cache
