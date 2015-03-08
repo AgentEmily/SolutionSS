@@ -52,6 +52,7 @@
             // BaseBindingNavigator
             // 
             this.BaseBindingNavigator.AddNewItem = null;
+            this.BaseBindingNavigator.BackColor = System.Drawing.Color.White;
             this.BaseBindingNavigator.CountItem = null;
             this.BaseBindingNavigator.DeleteItem = null;
             this.BaseBindingNavigator.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -165,7 +166,6 @@
             // 
             // btnCancelEdit
             // 
-            this.btnCancelEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelEdit.Image")));
             this.btnCancelEdit.ImageTransparentColor = System.Drawing.Color.Olive;
             this.btnCancelEdit.Name = "btnCancelEdit";
             this.btnCancelEdit.Size = new System.Drawing.Size(43, 55);

@@ -63,6 +63,10 @@
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="SkinH_CS, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SkinH_CS.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration.Install" />
@@ -129,6 +133,12 @@
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EveryBodyUse.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,12 +228,6 @@
     </Compile>
     <Compile Include="frmProductsSearch.designer.cs">
       <DependentUpon>frmProductsSearch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPurchaseOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPurchaseOrder.Designer.cs">
-      <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPurchaseOrderQuery.cs">
       <SubType>Form</SubType>
@@ -403,6 +407,9 @@
     <EmbeddedResource Include="BaseDialog.resx">
       <DependentUpon>BaseDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAboutBox.resx">
       <DependentUpon>frmAboutBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -447,9 +454,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductsSearch.resx">
       <DependentUpon>frmProductsSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPurchaseOrder.resx">
-      <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPurchaseOrderQuery.resx">
       <DependentUpon>frmPurchaseOrderQuery.cs</DependentUpon>

@@ -34,35 +34,43 @@ namespace ExControls
             // 
             // titleLabel
             // 
-            this.titleLabel.Location = new System.Drawing.Point(5, 3);
-            this.titleLabel.Size = new System.Drawing.Size(120, 25);
+            this.titleLabel.Location = new System.Drawing.Point(7, 3);
+            this.titleLabel.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
+            this.titleLabel.Size = new System.Drawing.Size(160, 29);
             this.titleLabel.Text = "labelTitle";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // entryPanel
             // 
             this.entryPanel.Controls.Add(this.entryLabel);
+            this.entryPanel.Location = new System.Drawing.Point(231, 3);
+            this.entryPanel.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.entryPanel.Size = new System.Drawing.Size(480, 29);
             // 
             // entryLabel
             // 
-            this.entryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.entryLabel.Location = new System.Drawing.Point(13, 5);
+            this.entryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.entryLabel.Location = new System.Drawing.Point(17, 6);
+            this.entryLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.entryLabel.Name = "entryLabel";
-            this.entryLabel.Size = new System.Drawing.Size(251, 16);
+            this.entryLabel.Size = new System.Drawing.Size(335, 18);
             this.entryLabel.TabIndex = 0;
             this.entryLabel.Text = "entryLabel";
             // 
             // LabelEntry
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.Name = "LabelEntry";
+            this.NormalBackColor1 = System.Drawing.Color.White;
+            this.NormalBackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(219)))), ((int)(((byte)(233)))));
             this.TitleText = "labelTitle";
             this.TitleTextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TitleWidth = 120;
+            this.TitleWidth = 160;
             this.entryPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

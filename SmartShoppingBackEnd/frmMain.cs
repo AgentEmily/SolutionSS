@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SkinSharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,14 +12,22 @@ using System.Windows.Forms;
 
 namespace SmartShoppingBackEnd
 {
+    //public new class MessageBox:frmBaseDialog
+    //{ }
+
     public partial class frmMain : Form
     {      
         public static frmMain FormMain;
         public static frmStartup FormStart;
+        public SkinH_Net skinh;
 
         public frmMain()
         {
             InitializeComponent();
+
+            skinh = new SkinH_Net();
+            skinh.AttachEx("skins\\itunes.she", "");
+
             FormMain = this;
             this.IsMdiContainer = true;
             this.menuStrip1.MdiWindowListItem = this.miWindows;
@@ -39,11 +48,31 @@ namespace SmartShoppingBackEnd
             splash.Show();
             splash.Update();
 
+            MdiClient ctlMDI;
+
+            // Loop through all of the form's controls looking
+            // for the control of type MdiClient.
+            foreach (Control ctl in this.Controls)
+            {
+                try
+                {
+                    // Attempt to cast the control to type MdiClient.
+                    ctlMDI = (MdiClient)ctl;
+
+                    // Set the BackColor of the MdiClient control.
+                    ctlMDI.BackgroundImage = this.BackgroundImage;
+                }
+                catch (InvalidCastException exc)
+                {
+                    // Catch and ignore the error if casting failed.
+                }
+            }
+
             //同步全部程式
             SyncProgram();
             //同步全部使用者權限
-            SyncBaceSSAuthority();
-            SyncADMINSSAuthority();
+            //SyncBaceSSAuthority();
+            //SyncADMINSSAuthority();
 
             //關閉系統啟動畫面(版權宣告畫面)
             splash.Close();
@@ -63,7 +92,7 @@ namespace SmartShoppingBackEnd
                 UserLabel.Text = "使用者:(" + FUserID + ")" +FUserName ;
 
                 //設定登入者的權限
-                SyncProgramsRight();
+                //SyncProgramsRight();
 
                 //顯示開始畫面
                 frmStartup start = new frmStartup();

@@ -62,3 +62,17 @@ C:\Users\III\Desktop\SolutionSS\WindowsService1\obj\Debug\SmartShoppingBackEnd.S
 C:\Users\III\Desktop\SolutionSS\WindowsService1\obj\Debug\WindowsService1.csproj.GenerateResource.Cache
 C:\Users\III\Desktop\SolutionSS\WindowsService1\obj\Debug\WindowsService1.exe
 C:\Users\III\Desktop\SolutionSS\WindowsService1\obj\Debug\WindowsService1.pdb
+C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe.config
+C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\bin\Debug\WindowsService1.pdb
+C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\bin\Debug\EntityFramework.dll
+C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\bin\Debug\EntityFramework.xml
+C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\bin\Debug\zh-Hant\EntityFramework.resources.dll
+C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\obj\Debug\WindowsService1.csprojResolveAssemblyReference.cache
+C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\obj\Debug\WindowsService1.ProjectInstaller.resources
+C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\obj\Debug\SmartShoppingBackEnd.ServiceAutoMailing.resources
+C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\obj\Debug\WindowsService1.csproj.GenerateResource.Cache
+C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\obj\Debug\WindowsService1.exe
+C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\obj\Debug\WindowsService1.pdb

@@ -22,7 +22,6 @@ namespace SmartShoppingBackEnd
             this.Validate();
             this.purchaseOrdersBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.smartShoppingDataSet);
-
         }
 
         private void frmwhy_Load(object sender, EventArgs e)
@@ -40,32 +39,32 @@ namespace SmartShoppingBackEnd
             // TODO: This line of code loads data into the 'smartShoppingDataSet.PurchaseOrders' table. You can move, or remove it, as needed.
             this.purchaseOrdersTableAdapter.Fill(this.smartShoppingDataSet.PurchaseOrders);
             this.PurchaseBindingNavigator.BindingSource = purchaseOrdersBindingSource;
-            this.purchaseOrdersBindingSource.DataError += purchaseOrdersBindingSource_DataError;
-            this.purchaseOrderDetailBindingSource.DataError += purchaseOrderDetailBindingSource_DataError;
-            this.purchaseOrdersDataGridView.DataError += purchaseOrdersDataGridView_DataError;
-            this.purchaseOrderDetailDataGridView.DataError += purchaseOrderDetailDataGridView_DataError;
+            //this.purchaseOrdersBindingSource.DataError += purchaseOrdersBindingSource_DataError;
+            //this.purchaseOrderDetailBindingSource.DataError += purchaseOrderDetailBindingSource_DataError;
+            //this.purchaseOrdersDataGridView.DataError += purchaseOrdersDataGridView_DataError;
+            //this.purchaseOrderDetailDataGridView.DataError += purchaseOrderDetailDataGridView_DataError;
             ButtonSetting();
         }
 
-        void purchaseOrderDetailDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            MessageBox.Show("請完整填寫訂購商品資料");
-        }
+        //void purchaseOrderDetailDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        //{
+        //    MessageBox.Show("請完整填寫訂購商品資料");
+        //}
 
-        void purchaseOrdersDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            MessageBox.Show("請完整填寫訂單資料");
-        }
+        //void purchaseOrdersDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        //{
+        //    MessageBox.Show("請完整填寫訂單資料");
+        //}
 
-        void purchaseOrderDetailBindingSource_DataError(object sender, BindingManagerDataErrorEventArgs e)
-        {
-            MessageBox.Show("請完整填寫資料");
-        }
+        //void purchaseOrderDetailBindingSource_DataError(object sender, BindingManagerDataErrorEventArgs e)
+        //{
+        //    MessageBox.Show("請完整填寫資料");
+        //}
 
-        void purchaseOrdersBindingSource_DataError(object sender, BindingManagerDataErrorEventArgs e)
-        {
-            MessageBox.Show("請完整填寫資料");
-        }
+        //void purchaseOrdersBindingSource_DataError(object sender, BindingManagerDataErrorEventArgs e)
+        //{
+        //    MessageBox.Show("請完整填寫資料");
+        //}
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
@@ -180,20 +179,20 @@ namespace SmartShoppingBackEnd
 
         private void subTotalTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (status!="browse")
-            {
-                int subtotal = 0;
-            if (int.TryParse(this.subTotalTextBox.Text, out subtotal))
-            {
-                this.valueAddTaxTextBox.Text = (Math.Round(subtotal * 0.05)).ToString();
-                this.label8.Text = (double.Parse(this.valueAddTaxTextBox.Text) + subtotal).ToString();
+            //if (status!="browse")
+            //{
+            //    int subtotal = 0;
+            //if (int.TryParse(this.subTotalTextBox.Text, out subtotal))
+            //{
+            //    this.valueAddTaxTextBox.Text = (Math.Round(subtotal * 0.05)).ToString();
+            //    this.label8.Text = (double.Parse(this.valueAddTaxTextBox.Text) + subtotal).ToString();
 
-            }
-            else
-            {
-                MessageBox.Show("金額必須為整數");
-            }
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("金額必須為整數");
+            //}
+            //}
             
         }
 

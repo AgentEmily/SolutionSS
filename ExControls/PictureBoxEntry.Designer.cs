@@ -35,37 +35,41 @@ namespace ExControls
             // 
             // titleLabel
             // 
-            this.titleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.titleLabel.Location = new System.Drawing.Point(41, 5);
-            this.titleLabel.Size = new System.Drawing.Size(119, 24);
+            this.titleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.titleLabel.Location = new System.Drawing.Point(55, 6);
+            this.titleLabel.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
+            this.titleLabel.Size = new System.Drawing.Size(159, 28);
             this.titleLabel.Text = "pictureTitle";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // entryPanel
             // 
             this.entryPanel.Controls.Add(this.entryPictureBox);
-            this.entryPanel.Location = new System.Drawing.Point(8, 37);
-            this.entryPanel.Size = new System.Drawing.Size(185, 178);
+            this.entryPanel.Location = new System.Drawing.Point(11, 43);
+            this.entryPanel.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.entryPanel.Size = new System.Drawing.Size(247, 205);
             // 
             // entryPictureBox
             // 
             this.entryPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.entryPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.entryPictureBox.Margin = new System.Windows.Forms.Padding(10);
+            this.entryPictureBox.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.entryPictureBox.Name = "entryPictureBox";
-            this.entryPictureBox.Padding = new System.Windows.Forms.Padding(10);
-            this.entryPictureBox.Size = new System.Drawing.Size(185, 178);
+            this.entryPictureBox.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.entryPictureBox.Size = new System.Drawing.Size(247, 205);
             this.entryPictureBox.TabIndex = 0;
             this.entryPictureBox.TabStop = false;
             // 
             // PictureBoxEntry
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.Name = "PictureBoxEntry";
-            this.Size = new System.Drawing.Size(201, 222);
+            this.NormalBackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(219)))), ((int)(((byte)(233)))));
+            this.Size = new System.Drawing.Size(268, 256);
             this.TitleText = "pictureTitle";
             this.TitleTextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.entryPanel.ResumeLayout(false);
