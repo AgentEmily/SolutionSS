@@ -12,12 +12,18 @@ namespace SmartShoppingBackEnd
     using System;
     using System.Collections.Generic;
     
-    public partial class AdSlider
+    public partial class PList
     {
-        public int ID { get; set; }
-        public byte[] Picture { get; set; }
-        public string Title_B { get; set; }
-        public string Title_M { get; set; }
-        public string Title_S { get; set; }
+        public PList()
+        {
+            this.ShoppingList = new HashSet<ShoppingList>();
+        }
+    
+        public int PList_ID { get; set; }
+        public string ListName { get; set; }
+        public int Member_ID { get; set; }
+    
+        public virtual Members Members { get; set; }
+        public virtual ICollection<ShoppingList> ShoppingList { get; set; }
     }
 }

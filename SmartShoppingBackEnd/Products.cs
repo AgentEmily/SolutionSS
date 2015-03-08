@@ -17,12 +17,12 @@ namespace SmartShoppingBackEnd
         public Products()
         {
             this.Comment1 = new HashSet<Comment>();
-            this.InsideShoppingList = new HashSet<InsideShoppingList>();
             this.OrderDetail = new HashSet<OrderDetail>();
             this.ProductPictures = new HashSet<ProductPictures>();
             this.PurchaseOrderDetail = new HashSet<PurchaseOrderDetail>();
             this.RecommendationChart = new HashSet<RecommendationChart>();
             this.Promotions = new HashSet<Promotions>();
+            this.ShoppingList = new HashSet<ShoppingList>();
         }
     
         public int Product_ID { get; set; }
@@ -44,12 +44,12 @@ namespace SmartShoppingBackEnd
         public virtual Categories Categories { get; set; }
         public virtual CoinGift CoinGift { get; set; }
         public virtual ICollection<Comment> Comment1 { get; set; }
-        public virtual ICollection<InsideShoppingList> InsideShoppingList { get; set; }
         public virtual ICollection<OrderDetail> OrderDetail { get; set; }
         public virtual ICollection<ProductPictures> ProductPictures { get; set; }
         public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
         public virtual Recommendation Recommendation { get; set; }
         public virtual ICollection<RecommendationChart> RecommendationChart { get; set; }
         public virtual ICollection<Promotions> Promotions { get; set; }
+        public virtual ICollection<ShoppingList> ShoppingList { get; set; }
     }
 }

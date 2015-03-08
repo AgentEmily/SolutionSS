@@ -12,24 +12,28 @@ namespace SmartShoppingBackEnd
     using System;
     using System.Collections.Generic;
     
-    public partial class InsideShoppingList
+    public partial class ShoppingList
     {
-        public InsideShoppingList()
+        public ShoppingList()
         {
+            this.Outside = new HashSet<Outside>();
             this.RepurchaseCycle = new HashSet<RepurchaseCycle>();
         }
     
         public int List_ID { get; set; }
-        public int Member_ID { get; set; }
-        public int Category_ID { get; set; }
-        public int Product_ID { get; set; }
-        public Nullable<System.DateTime> NextDate { get; set; }
+        public int PList_ID { get; set; }
+        public string ListName { get; set; }
+        public string Link { get; set; }
+        public string Phone { get; set; }
+        public string Address { get; set; }
         public Nullable<int> Quantity { get; set; }
+        public Nullable<System.DateTime> NextDate { get; set; }
         public string Description { get; set; }
+        public bool Active { get; set; }
     
-        public virtual Categories Categories { get; set; }
-        public virtual Members Members { get; set; }
-        public virtual Products Products { get; set; }
+        public virtual ICollection<Outside> Outside { get; set; }
+        public virtual PList PList { get; set; }
         public virtual ICollection<RepurchaseCycle> RepurchaseCycle { get; set; }
+        public virtual Products Products { get; set; }
     }
 }

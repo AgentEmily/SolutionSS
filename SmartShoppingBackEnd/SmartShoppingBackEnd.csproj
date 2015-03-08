@@ -90,24 +90,6 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdSlider.cs">
-      <DependentUpon>SSBackEndModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdTicker.cs">
-      <DependentUpon>SSBackEndModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetRoles.cs">
-      <DependentUpon>SSBackEndModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUserClaims.cs">
-      <DependentUpon>SSBackEndModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUserLogins.cs">
-      <DependentUpon>SSBackEndModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUsers.cs">
-      <DependentUpon>SSBackEndModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="AutoMail.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
@@ -123,13 +105,16 @@
     <Compile Include="Categories.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Categories_P.cs">
+      <DependentUpon>SSBackEndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Categories_Status.cs">
+      <DependentUpon>SSBackEndModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="CoinGift.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Comment.cs">
-      <DependentUpon>SSBackEndModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="C__MigrationHistory.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EveryBodyUse.cs" />
@@ -247,6 +232,12 @@
     <Compile Include="frmRelateProducts.designer.cs">
       <DependentUpon>frmRelateProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRoleAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoleAnalysis.Designer.cs">
+      <DependentUpon>frmRoleAnalysis.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRoles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,9 +277,6 @@
     <Compile Include="InsideEmailList.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="InsideShoppingList.cs">
-      <DependentUpon>SSBackEndModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Members.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
@@ -301,10 +289,10 @@
     <Compile Include="Outside.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="OutsideShoppingList.cs">
+    <Compile Include="PaymentMethod.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="PaymentMethod.cs">
+    <Compile Include="PList.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductPictures.cs">
@@ -356,10 +344,16 @@
     <Compile Include="RolesDetail.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="RoleSmart.cs">
+      <DependentUpon>SSBackEndModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Royalty.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ShipMethod.cs">
+      <DependentUpon>SSBackEndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingList.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SmartShoppingDataSet.cs">
@@ -402,6 +396,12 @@
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Vendors.cs">
+      <DependentUpon>SSBackEndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_ProductxMember.cs">
+      <DependentUpon>SSBackEndModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_RoleXProduct.cs">
       <DependentUpon>SSBackEndModel.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BaseDialog.resx">
@@ -464,6 +464,9 @@
     <EmbeddedResource Include="frmRelateProducts.resx">
       <DependentUpon>frmRelateProducts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRoleAnalysis.resx">
+      <DependentUpon>frmRoleAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRoles.resx">
       <DependentUpon>frmRoles.cs</DependentUpon>
     </EmbeddedResource>
@@ -496,6 +499,7 @@
     </Compile>
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReportRole.rdlc" />
     <EmbeddedResource Include="Report_Recommendation.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

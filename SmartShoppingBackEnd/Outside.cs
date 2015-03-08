@@ -15,9 +15,9 @@ namespace SmartShoppingBackEnd
     public partial class Outside
     {
         public int Outside_ID { get; set; }
-        public int OutList_ID { get; set; }
+        public int List_ID { get; set; }
         public System.DateTime LastDate { get; set; }
     
-        public virtual OutsideShoppingList OutsideShoppingList { get; set; }
+        public virtual ShoppingList ShoppingList { get; set; }
     }
 }

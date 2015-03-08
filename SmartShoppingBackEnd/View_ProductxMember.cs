@@ -12,9 +12,9 @@ namespace SmartShoppingBackEnd
     using System;
     using System.Collections.Generic;
     
-    public partial class AdTicker
+    public partial class View_ProductxMember
     {
-        public int ID { get; set; }
-        public string TagLine { get; set; }
+        public int Product_ID { get; set; }
+        public int Member_ID { get; set; }
     }
 }

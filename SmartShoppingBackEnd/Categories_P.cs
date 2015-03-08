@@ -12,16 +12,9 @@ namespace SmartShoppingBackEnd
     using System;
     using System.Collections.Generic;
     
-    public partial class AspNetRoles
+    public partial class Categories_P
     {
-        public AspNetRoles()
-        {
-            this.AspNetUsers = new HashSet<AspNetUsers>();
-        }
-    
-        public string Id { get; set; }
-        public string Name { get; set; }
-    
-        public virtual ICollection<AspNetUsers> AspNetUsers { get; set; }
+        public int CID1 { get; set; }
+        public string CategoryName { get; set; }
     }
 }

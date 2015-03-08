@@ -25,26 +25,18 @@ namespace SmartShoppingBackEnd
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
-        public virtual DbSet<AdSlider> AdSlider { get; set; }
-        public virtual DbSet<AdTicker> AdTicker { get; set; }
-        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
-        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
-        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
-        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<AutoMail> AutoMail { get; set; }
         public virtual DbSet<Brands> Brands { get; set; }
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<CoinGift> CoinGift { get; set; }
         public virtual DbSet<Comment> Comment { get; set; }
         public virtual DbSet<InsideEmailList> InsideEmailList { get; set; }
-        public virtual DbSet<InsideShoppingList> InsideShoppingList { get; set; }
         public virtual DbSet<Members> Members { get; set; }
         public virtual DbSet<OrderDetail> OrderDetail { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<Outside> Outside { get; set; }
-        public virtual DbSet<OutsideShoppingList> OutsideShoppingList { get; set; }
         public virtual DbSet<PaymentMethod> PaymentMethod { get; set; }
+        public virtual DbSet<PList> PList { get; set; }
         public virtual DbSet<ProductPictures> ProductPictures { get; set; }
         public virtual DbSet<Products> Products { get; set; }
         public virtual DbSet<Promotions> Promotions { get; set; }
@@ -57,13 +49,19 @@ namespace SmartShoppingBackEnd
         public virtual DbSet<Returns> Returns { get; set; }
         public virtual DbSet<Roles> Roles { get; set; }
         public virtual DbSet<RolesDetail> RolesDetail { get; set; }
+        public virtual DbSet<RoleSmart> RoleSmart { get; set; }
         public virtual DbSet<Royalty> Royalty { get; set; }
         public virtual DbSet<ShipMethod> ShipMethod { get; set; }
+        public virtual DbSet<ShoppingList> ShoppingList { get; set; }
         public virtual DbSet<Source> Source { get; set; }
         public virtual DbSet<SSAuthority> SSAuthority { get; set; }
         public virtual DbSet<SSPrograms> SSPrograms { get; set; }
         public virtual DbSet<SSUsers> SSUsers { get; set; }
         public virtual DbSet<Status> Status { get; set; }
         public virtual DbSet<Vendors> Vendors { get; set; }
+        public virtual DbSet<Categories_P> Categories_P { get; set; }
+        public virtual DbSet<Categories_Status> Categories_Status { get; set; }
+        public virtual DbSet<View_ProductxMember> View_ProductxMember { get; set; }
+        public virtual DbSet<View_RoleXProduct> View_RoleXProduct { get; set; }
     }
 }

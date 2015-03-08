@@ -76,3 +76,17 @@ C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService
 C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\obj\Debug\WindowsService1.csproj.GenerateResource.Cache
 C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\obj\Debug\WindowsService1.exe
 C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WindowsService1\obj\Debug\WindowsService1.pdb
+F:\BackEnd\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe.config
+F:\BackEnd\SolutionSS\WindowsService1\bin\Debug\WindowsService1.exe
+F:\BackEnd\SolutionSS\WindowsService1\bin\Debug\WindowsService1.pdb
+F:\BackEnd\SolutionSS\WindowsService1\bin\Debug\EntityFramework.dll
+F:\BackEnd\SolutionSS\WindowsService1\bin\Debug\EntityFramework.SqlServer.dll
+F:\BackEnd\SolutionSS\WindowsService1\bin\Debug\EntityFramework.xml
+F:\BackEnd\SolutionSS\WindowsService1\bin\Debug\EntityFramework.SqlServer.xml
+F:\BackEnd\SolutionSS\WindowsService1\bin\Debug\zh-Hant\EntityFramework.resources.dll
+F:\BackEnd\SolutionSS\WindowsService1\obj\Debug\WindowsService1.csprojResolveAssemblyReference.cache
+F:\BackEnd\SolutionSS\WindowsService1\obj\Debug\WindowsService1.ProjectInstaller.resources
+F:\BackEnd\SolutionSS\WindowsService1\obj\Debug\SmartShoppingBackEnd.ServiceAutoMailing.resources
+F:\BackEnd\SolutionSS\WindowsService1\obj\Debug\WindowsService1.csproj.GenerateResource.Cache
+F:\BackEnd\SolutionSS\WindowsService1\obj\Debug\WindowsService1.exe
+F:\BackEnd\SolutionSS\WindowsService1\obj\Debug\WindowsService1.pdb

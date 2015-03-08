@@ -99,3 +99,16 @@ C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WpfControlLibr
 C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.pdb
 C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WpfControlLibrary2\bin\Debug\WpfControlLibrary2.dll
 C:\Users\III\Desktop\災難性的失敗的挽救行動\SolutionSS\WpfControlLibrary2\bin\Debug\WpfControlLibrary2.pdb
+F:\BackEnd\SolutionSS\WpfControlLibrary2\bin\Debug\WpfControlLibrary2.dll
+F:\BackEnd\SolutionSS\WpfControlLibrary2\bin\Debug\WpfControlLibrary2.pdb
+F:\BackEnd\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.csprojResolveAssemblyReference.cache
+F:\BackEnd\SolutionSS\WpfControlLibrary2\obj\Debug\UserControl1.baml
+F:\BackEnd\SolutionSS\WpfControlLibrary2\obj\Debug\UserControl_Mirror.baml
+F:\BackEnd\SolutionSS\WpfControlLibrary2\obj\Debug\UserControl1.g.cs
+F:\BackEnd\SolutionSS\WpfControlLibrary2\obj\Debug\UserControl_Mirror.g.cs
+F:\BackEnd\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2_MarkupCompile.cache
+F:\BackEnd\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.g.resources
+F:\BackEnd\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.Properties.Resources.resources
+F:\BackEnd\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.csproj.GenerateResource.Cache
+F:\BackEnd\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.dll
+F:\BackEnd\SolutionSS\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.pdb

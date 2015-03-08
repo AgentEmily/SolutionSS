@@ -12,13 +12,14 @@ namespace SmartShoppingBackEnd
     using System;
     using System.Collections.Generic;
     
-    public partial class AspNetUserClaims
+    public partial class View_RoleXProduct
     {
-        public int Id { get; set; }
-        public string UserId { get; set; }
-        public string ClaimType { get; set; }
-        public string ClaimValue { get; set; }
-    
-        public virtual AspNetUsers AspNetUsers { get; set; }
+        public int Roles_ID { get; set; }
+        public int Product_ID { get; set; }
+        public int Order_ID { get; set; }
+        public int Member_ID { get; set; }
+        public int OrderDetail_ID { get; set; }
+        public int UnitPrice { get; set; }
+        public int Amount { get; set; }
     }
 }

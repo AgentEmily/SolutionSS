@@ -18,7 +18,8 @@ namespace SmartShoppingBackEnd
         public int Member_ID { get; set; }
         public int Product_ID { get; set; }
         public string Comment1 { get; set; }
-        public int Stars { get; set; }
+        public Nullable<int> Stars { get; set; }
+        public System.DateTime Date { get; set; }
     
         public virtual Members Members { get; set; }
         public virtual Products Products { get; set; }

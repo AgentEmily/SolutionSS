@@ -12,12 +12,11 @@ namespace SmartShoppingBackEnd
     using System;
     using System.Collections.Generic;
     
-    public partial class AspNetUserLogins
+    public partial class RoleSmart
     {
-        public string LoginProvider { get; set; }
-        public string ProviderKey { get; set; }
-        public string UserId { get; set; }
-    
-        public virtual AspNetUsers AspNetUsers { get; set; }
+        public int RoleID { get; set; }
+        public int ProductID { get; set; }
+        public Nullable<int> TimesPurchased { get; set; }
+        public Nullable<int> OrderBilling { get; set; }
     }
 }

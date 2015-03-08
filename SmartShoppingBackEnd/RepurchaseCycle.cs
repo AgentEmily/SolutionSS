@@ -20,8 +20,7 @@ namespace SmartShoppingBackEnd
         public int Repeat_ID { get; set; }
         public System.DateTime SetDate { get; set; }
     
-        public virtual InsideShoppingList InsideShoppingList { get; set; }
-        public virtual OutsideShoppingList OutsideShoppingList { get; set; }
         public virtual Repeat Repeat { get; set; }
+        public virtual ShoppingList ShoppingList { get; set; }
     }
 }

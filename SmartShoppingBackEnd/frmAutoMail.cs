@@ -654,13 +654,15 @@ namespace SmartShoppingBackEnd
 
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
+        private void button5_Click_1(object sender, EventArgs e)//取消
         {
             if (cts!=null)
             {
                 cts.Cancel();
             }
         }
+
+        //
 
         private void button7_Click(object sender, EventArgs e)
         {
